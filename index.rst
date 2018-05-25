@@ -10,11 +10,4 @@ Welcome to F5 Agility 2018 Security in AWS's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
-
+Labs/index*
