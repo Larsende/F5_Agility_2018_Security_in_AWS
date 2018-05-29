@@ -28,4 +28,4 @@ SSL Cipher Rules can be combined in the groups as follows:
 
 9. Down at the bottom of the Cipher Group configuration will be the allowed Ciphers.  With the above string you will get a security configuration that will still allow some older clients like WindowsXP and IE8.  You can further security it by removed TLSv1 or making it so the default f5-ecc cipher rule is in the "Restrict the Allowed List to the Following."
 
-10. Click on Fkinished.
+10. Click on Finished.
