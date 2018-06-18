@@ -5,7 +5,4 @@ Welcome to F5 Agility 2018 Security in AWS's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   Lab1/module1/
-   Lab2/module1/
-   Lab3/module1/
-   Lab4/module1/
+   Lab*/module*
