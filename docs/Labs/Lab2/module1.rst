@@ -1,4 +1,4 @@
-Security your AWS instance and the apps behind it
+Securing your AWS instance and the apps behind it
 =================================================
 
 Welcome to Lab2 of Security in AWS documentation.
