@@ -1,4 +1,4 @@
-Securing BIG-IP in AWS
+Building BIG-IP in AWS
 ======================
 
 
