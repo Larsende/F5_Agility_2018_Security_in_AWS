@@ -31,11 +31,9 @@ All labs as part of this class will be done through the AWS Management Console. 
 - IAM user name <Student#> where # is the number assigned during class
 - Password <Given in classroom>
 
-.. figure:: ../images/images/login_example.png
+.. figure:: ../images/login_example.png
 
-**Important:** Ensure you are in the US West (N. California) region.
 
-.. figure:: ../images/images/region.png
 
 Prepare
 -------
