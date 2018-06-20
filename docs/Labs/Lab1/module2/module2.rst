@@ -13,7 +13,7 @@ Navigate to |github| and read through the documentation. Note the ``Prerequisite
 When ready, launch the CFT for the ``Hourly`` -> ``existing stack`` template. Utilize the Github documentation to complete the deployment into your Student# VPC lab environment.
 
 
-.. figure:: images/CFT_hourly.png
+.. figure:: ../images/CFT_hourly.png
 
 |
 
