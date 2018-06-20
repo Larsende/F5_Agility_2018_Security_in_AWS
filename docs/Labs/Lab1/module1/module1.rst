@@ -7,7 +7,7 @@ The following diagram shows a basic multi-NIC deployment of BIG-IP VE in an Amaz
 
 Complete the tasks in this guide to create this deployment.
 
-.. figure:: images/multi_deploy1.png
+.. figure:: ..images/multi_deploy1.png
 
 
 |
