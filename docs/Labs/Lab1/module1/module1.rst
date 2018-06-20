@@ -7,7 +7,7 @@ The following diagram shows a basic multi-NIC deployment of BIG-IP VE in an Amaz
 
 Complete the tasks in this guide to create this deployment.
 
-.. figure:: ..images/multi_deploy1.png
+.. figure:: ../images/multi_deploy1.png
 
 
 |
@@ -31,11 +31,11 @@ All labs as part of this class will be done through the AWS Management Console. 
 - IAM user name <Student#> where # is the number assigned during class
 - Password <Given in classroom>
 
-.. figure:: images/login_example.png
+.. figure:: ../images/images/login_example.png
 
 **Important:** Ensure you are in the US West (N. California) region.
 
-.. figure:: images/region.png
+.. figure:: ../images/images/region.png
 
 Prepare
 -------
@@ -77,7 +77,7 @@ A BIG-IP VE instance must be in an Amazon virtual private cloud (VPC). You can u
 
    The subnet listed as Public in the AWS UI is for management traffic to the BIG-IP Configuration utility. The subnet listed as Private is for application traffic to the BIG-IP VE external VLAN.
 
-   .. figure:: images/vpc_multi_subnet_ALD.png
+   .. figure:: ../images/vpc_multi_subnet_ALD.png
 
    |
 
@@ -86,7 +86,7 @@ A BIG-IP VE instance must be in an Amazon virtual private cloud (VPC). You can u
 
 Note: As everyone in the class is using a shared account, you can filter objects based on your student name in most of the AWS console screens.
 
-.. figure:: images/filter.png
+.. figure:: ../images/filter.png
 
 .. _awsintsub:
 
@@ -115,7 +115,7 @@ Now create the internal subnet in that same availability zone. The internal subn
 
 Your VPC should now have three subnets.
 
-.. figure:: images/three_subnets.png
+.. figure:: ../images/three_subnets.png
 
 |
 
@@ -131,20 +131,20 @@ By default, AWS will not allow traffic from the management and external subnets 
 2. In the Navigation pane, under Virtual Private Cloud, select :guilabel:`Route Tables`.
 3. Select the routing table with one subnet.
 
-   .. figure:: images/routes1.png
+   .. figure:: ../images/routes1.png
 
    |
 
 4. Click the Subnet Associations tab at the bottom of the screen.
 5. Click :guilabel:`Edit`.
 
-   .. figure:: images/routes2.png
+   .. figure:: ../images/routes2.png
 
    |
 
 6. Select the check box for the external subnet, ``10.0.1.0/24``.
 
-   .. figure:: images/routes3.png
+   .. figure:: ../images/routes3.png
 
    |
 
