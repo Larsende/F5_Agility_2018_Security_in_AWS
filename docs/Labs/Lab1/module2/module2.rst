@@ -35,3 +35,8 @@ We'll using the Github CFT to launch a second BIG-IP into the existing VPC that 
 11. Leave all fields in the ``Options`` page at defaults and select :guilabel:`Next`.
 12. Review the settings, check the ``I acknowledge that AWS CloudFormation might create IAM resources`` box and click :guilabel:`Create`.
 13. Refresh the page to see the status of the deployment.
+
+
+.. |github| raw:: html
+
+   <a href="https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/standalone/3nic" target="_blank">F5's Github repository</a>
