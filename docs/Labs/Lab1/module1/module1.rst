@@ -33,7 +33,7 @@ All labs as part of this class will be done through the AWS Management Console. 
 
 .. figure:: ../images/login_example.png
 
-
+**Important! Ensure all you are in the US East (N. Virginia) region!**
 
 Prepare
 -------
