@@ -27,7 +27,7 @@ First, we need to create and save a key pair.
 
 Next, we're ready to deploy the CFT.
 
-Launch the CFT for the ``Hourly`` -> ``existing stack`` template. 
+Launch the CFT for the ``Hourly`` -> ``existing stack`` template.
 
 .. figure:: ../images/CFT_hourly.png
 
