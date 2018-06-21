@@ -8,7 +8,7 @@ Utilize CFTs from Github
 
 F5 publishes CFTs on a regular basis to Github.
 
-Navigate to |github| and read through the documentation. Note the ``Prerequisites`` section that describes the requirements for the subnets created in Module 1.
+Navigate to |github| and read through the documentation. Note the ``Prerequisites`` section that describes the requirements for the subnets created in Module 1
 
 
 
@@ -27,7 +27,7 @@ First, we need to create and save a key pair.
 
 Next, we're ready to deploy the CFT.
 
-Launch the CFT for the ``Hourly`` -> ``existing stack`` template. Utilize the Github documentation to complete the deployment into your Student# VPC lab environment.
+Launch the CFT for the ``Hourly`` -> ``existing stack`` template. 
 
 .. figure:: ../images/CFT_hourly.png
 
