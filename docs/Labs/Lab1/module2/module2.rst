@@ -8,12 +8,9 @@ Utilize CFTs from Github
 
 F5 publishes CFTs on a regular basis to Github.
 
-Navigate to |github| and read through the documentation. Note the ``Prerequisites`` section that describes the requirements for the subnets created in Lab 1.
-
-When ready, launch the CFT for the ``Hourly`` -> ``existing stack`` template. Utilize the Github documentation to complete the deployment into your Student# VPC lab environment.
+Navigate to |github| and read through the documentation. Note the ``Prerequisites`` section that describes the requirements for the subnets created in Module 1.
 
 
-.. figure:: ../images/CFT_hourly.png
 
 |
 
@@ -22,13 +19,25 @@ Launch CFT into existing VPC
 
 We'll using the Github CFT to launch a second BIG-IP into the existing VPC that already exists.
 
-1. At the ``Select Template`` page, ensure you are still in the ``N. California`` region, note the template URL is already selected, and click :guilabel:`Next`.
+First, we need to create and save a key pair.
+
+1. In the AWS Management Console, navigate to :guilabel:`EC2` and the :guilabel:`Key Pairs`
+2. Click and name it ``Student#-BIG-IP``.
+3. Click :guilabel:`Create` and it will download the ``Student#-BIG-IP.pem`` file to your local machine. Be sure to keep track of this file as you will need it to access the BIG-IP later.
+
+Next, we're ready to deploy the CFT.
+
+Launch the CFT for the ``Hourly`` -> ``existing stack`` template. Utilize the Github documentation to complete the deployment into your Student# VPC lab environment.
+
+.. figure:: ../images/CFT_hourly.png
+
+1. At the ``Select Template`` page, ensure you are still in the same region where you created your VPC, note the template URL is already selected, and click :guilabel:`Next`.
 2. Create a :guilabel:`Stack name` of ``Student#-CFT``
 3. Find your ``Student#`` VPC in the drop down.
 4. Select the Management, External, and Internal subnets in the drop downs.
 5. Change the :guilabel:`BIG-IP Image Name` to ``Good25Mbps``
 6. Change the :guilabel:`AWS Instance Size` to ``t2.medium``.
-7. Utilize the Student# key in the drop down for :guilabel:`SSH Key`
+7. Utilize the ``Student#-BIG-IP`` key in the drop down for :guilabel:`SSH Key`
 8. Enter the Lab Public IP in the :guilabel:`Source Address(es) for Management Access`
 9. Enter ``0.0.0.0/0`` in the :guilabel:`Source Address(es) for Web Application Access (80/443)` field.
 10. Leave all other fields at default values and select :guilabel:`Next`.
