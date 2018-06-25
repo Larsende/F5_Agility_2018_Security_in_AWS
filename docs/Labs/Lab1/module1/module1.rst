@@ -69,13 +69,13 @@ Create a VPC with multiple subnets
 
 A BIG-IP VE instance must be in an Amazon virtual private cloud (VPC). You can use a wizard to create a VPC that has management and external subnets. You will create the internal subnet separately.
 
-1. In the AWS Management Console, from the Services menu at the top of the screen (scroll down), select :guilabel:`VPC`.
+1. In the AWS Management Console, from the Services menu at the top of the screen (scroll down), from the VPC Dashboard select :guilabel:`Create VPC`.
 2. Click :menuselection:`Start VPC Wizard -> VPC with Public and Private Subnets`, and then click :guilabel:`Select`.
 3. Complete the wizard with the following entries.
 
    The subnet listed as Public in the AWS UI is for management traffic to the BIG-IP Configuration utility. The subnet listed as Private is for application traffic to the BIG-IP VE external VLAN.
 
-   .. figure:: ../images/vpc_multi_subnet_ALD.png
+   .. figure:: ../images/vpc_multi_subnet.png
 
    |
 
@@ -95,13 +95,13 @@ Create an internal subnet
 Now create the internal subnet in that same availability zone. The internal subnet corresponds to the BIG-IP internal VLAN.
 
 1. In the AWS Management Console, from the Services menu at the top of the screen, select :guilabel:`VPC`.
-2. In the Navigation pane, under Virtual Private Cloud, select :guilabel:`Subnets`. When you used the VPC wizard, you created two subnets: management and external. Note the availability zone for these subnets (for example, us-west-2a).
+2. In the Navigation pane, under Virtual Private Cloud, select :guilabel:`Subnets`. When you used the VPC wizard, you created two subnets: management and external. Note the availability zone for these subnets (for example, us-east-1e).
 3. Click :guilabel:`Create Subnet` and populate the appropriate fields.
 
    =============================== =========================================
    Field	                       Value
    =============================== =========================================
-   :guilabel:`Name tag`	           ``Internal``
+   :guilabel:`Name tag`	           ``Student#-Internal``
    :guilabel:`VPC`	               Student#
    :guilabel:`Availability Zone`   The zone where the other subnets reside
    :guilabel:`CIDR block`	       ``10.0.2.0/24``
@@ -161,8 +161,5 @@ The management and external subnets are now explicitly associated with the route
 
 .. |login| raw:: html
 
-   <a href="https://594404052146.signin.aws.amazon.com/console" target="_blank">https://594404052146.signin.aws.amazon.com/console</a>
-
-.. |login| raw:: html
-
    <a href="https://854140829363.signin.aws.amazon.com/console" target="_blank">https://854140829363.signin.aws.amazon.com/console</a>
+
