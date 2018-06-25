@@ -46,6 +46,15 @@ Launch the CFT for the ``Hourly`` -> ``existing stack`` template.
 13. Refresh the page to see the status of the deployment.
 
 
+Set the admin password for BIG-IP VE
+````````````````````````````````````
+1.  Find the BIG-IP instance in the AWS Console under :guilabel:`EC2 -> Instances`
+2.  Highlight the BIG-IP instance in the list and click :guilabel:`Connect`
+3.  Follow the instructions regarding connecting with an SSH utility - however, substitute ``admin`` as the username instead of root and ensure you use the ``Management EIP`` (the Connect instructions may have the incorrect IP). Use the .pem key pair you saved when you created the instance in Lab 1. For example: ``ssh -i Student#.pem admin@<EIP-of-Management>``
+4.  After connecting via SSH issue the command ``modify auth password admin`` - change the admin password to one that you will remember
+5.  You can now connect to the BIG-IP Web UI on HTTPS using the EIP for the management interface (bypass the self-signed cert warning) and the credentials admin/<password-from-step-4>
+
+
 .. |github| raw:: html
 
    <a href="https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/standalone/3nic" target="_blank">F5's Github repository</a>
