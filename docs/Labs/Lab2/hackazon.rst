@@ -62,7 +62,6 @@ We will now setup an SSL Offload Virtual Server using the Cipher Group previousl
 
 #. Click on Finished.
 
-   .. image: ./images/image205.png
-      :scale: 50 %
+   .. figure: ./images/image205.png
 
 #. Now take the Elastic IP you found earlier and open a web browser and go to 'https://<Elastic IP>'.  You will get a certificate error for mismatch but after ignoring the certificate error you should start seeing the hackazon web page.
