@@ -10,7 +10,7 @@ SSL Cipher Rules can be combined in the groups as follows:
 
 #. We will start by creating a SSL Cipher Rule.  Click on Local Traffic, Ciphers, Rules, then Create.
 
-#. Enter a name for the rule.
+#. Enter a name for the rule such as StudentX-cipherrule.
 
 #. Enter the following Cipher String
 
@@ -22,9 +22,9 @@ SSL Cipher Rules can be combined in the groups as follows:
 
 #. Click on Create.
 
-#. Enter a name for the Cipher Group.
+#. Enter a name for the Cipher Group such as StudentX-ciphergroup.
 
-#. Select the rule previously created and add it to the "Allow the Following" category. 
+#. Select the StudentX-cipherrule previously created and add it to the "Allow the Following" category. 
 
 #. Down at the bottom of the Cipher Group configuration will be the allowed Ciphers.  With the above string you will get a security configuration that will still allow some older clients like WindowsXP and IE8.  You can further secure it by removing TLSv1 or making it so the default f5-ecc cipher rule is in the "Restrict the Allowed List to the Following."
 

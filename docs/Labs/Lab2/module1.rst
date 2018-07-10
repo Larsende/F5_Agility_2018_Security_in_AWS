@@ -11,3 +11,4 @@ Welcome to Lab2 of Security in AWS documentation.
 
    mgmt-cipher
    ssl-ciphers
+   hackazon
