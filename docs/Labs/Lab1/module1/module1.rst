@@ -68,7 +68,7 @@ Create a VPC with multiple subnets
 
 A BIG-IP VE instance must be in an Amazon virtual private cloud (VPC). You can use a wizard to create a VPC that has management and external subnets. You will create the internal subnet separately.
 
-1. In the AWS Management Console, from the Services menu at the top of the screen (scroll down), from the VPC Dashboard select :guilabel:`Create VPC`.
+1. In the AWS Management Console, from the Services menu at the top of the screen (scroll down), select VPC, then select :guilabel:`Create VPC`.
 2. Click :menuselection:`Start VPC Wizard -> VPC with Public and Private Subnets`, and then click :guilabel:`Select`.
 3. Complete the wizard with the following entries.
 
@@ -126,7 +126,7 @@ By default, AWS will not allow traffic from the management and external subnets 
 
 1. In the AWS Management Console, from the Services menu at the top of the screen, select :guilabel:`VPC`.
 2. In the Navigation pane, under Virtual Private Cloud, select :guilabel:`Route Tables`.
-3. Select the routing table with one subnet.
+3. Filter for your Student#, and then select the routing table with one subnet.
 
    .. figure:: ../images/routes1.png
 
