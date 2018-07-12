@@ -55,7 +55,7 @@ To initially change the password for the BIG-IP management utility we need to co
 3.  You can connect using an SSH utility - make sure to use ``admin`` as the username (do not use ``root``) and the ``Management EIP`` from the previous step. Use the ``Student#-BIG-IP.pem`` key pair you saved when you created the instance in Lab 1. For example: ``ssh -i Student#.pem admin@<EIP-of-Management>``
 4.  After connecting via SSH issue the command ``modify auth password admin`` - change the admin password to one that you will remember
 5.  Save the password change by issuing the command ``save sys config``
-6.  You can now connect to the BIG-IP Web UI on HTTPS using the EIP for the management interface (bypass the self-signed cert warning) and the credentials admin/<password-from-step-3>
+6.  You can now connect to the BIG-IP Web UI on HTTPS using the EIP for the management interface (bypass the self-signed cert warning) and the credentials admin/<password-from-step-4>
 
 
 .. |github| raw:: html
