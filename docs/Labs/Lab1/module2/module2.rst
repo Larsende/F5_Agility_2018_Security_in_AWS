@@ -1,7 +1,7 @@
 Deploy the BIG-IP
 -----------------
 
-In Module 2 we will deploy the BIG-IP into the AWS VPC created in Module 1. We will also launch the Hackazon instance to use for Application Security configurations in subsequent Labs.
+In Module 2 we will deploy the BIG-IP into the AWS VPC created in Module 1.
 
 Utilize CFTs from Github
 ````````````````````````
@@ -21,15 +21,15 @@ We'll using the Github CFT to launch a second BIG-IP into the existing VPC that 
 
 First, we need to create and save a key pair.
 
-1. In the AWS Management Console, navigate to :guilabel:`EC2` and the :guilabel:`Key Pairs`
-2. Click and name it ``Student#-BIG-IP``.
+1. In the AWS Management Console, navigate to :guilabel:`EC2` and then :guilabel:`Key Pairs`
+2. Click :guilabel:`Create Key Pair` and name it ``Student#-BIG-IP``.
 3. Click :guilabel:`Create` and it will download the ``Student#-BIG-IP.pem`` file to your local machine. Be sure to keep track of this file as you will need it to access the BIG-IP later.
 
 Next, we're ready to deploy the CFT.
 
-1. Click the :guilabel:`Launch Stack` button under the ``Hourly`` -> ``existing stack`` template.
-.. figure:: ../images/CFT_hourly.png
+1. From the GitHub page, click the :guilabel:`Launch Stack` button about half-way down the page.
 
+.. figure:: ../images/CFT_hourly.png
 
 2. At the ``Select Template`` page, ensure you are still in the same region where you created your VPC, note the template URL is already selected, and click :guilabel:`Next`.
 3. Create a :guilabel:`Stack name` of ``Student#-CFT``
@@ -51,12 +51,13 @@ Set the admin password for BIG-IP VE
 To initially change the password for the BIG-IP management utility we need to connect via SSH and then modify the admin password.
 
 1.  First, you will need to change the permissions of the ``Student#-BIG-IP.pem`` key pair you saved above. For example, ``chmod 400 Student#-BIG-IP.pem``
-2.  You can connect using an SSH utility - make sure to use ``admin`` as the username (do not use root) and ensure you use the ``Management EIP`` (you can find this by viewing the settings the EC2 instance settings). Use the ``Student#-BIG-IP.pem`` key pair you saved when you created the instance in Lab 1. For example: ``ssh -i Student#.pem admin@<EIP-of-Management>``
-3.  After connecting via SSH issue the command ``modify auth password admin`` - change the admin password to one that you will remember
-4.  Save the password change by issuing the command ``save sys config``
-5.  You can now connect to the BIG-IP Web UI on HTTPS using the EIP for the management interface (bypass the self-signed cert warning) and the credentials admin/<password-from-step-3>
+2.  Next, find the EIP that the CFT created for the ``Management`` interface of your BIG-IP instance by going to :guilabel:`EC2 -> Network Interfaces` and filtering for ``Student#``. Note the IP address for the ``Management`` interface.
+3.  You can connect using an SSH utility - make sure to use ``admin`` as the username (do not use ``root``) and the ``Management EIP`` from the previous step. Use the ``Student#-BIG-IP.pem`` key pair you saved when you created the instance in Lab 1. For example: ``ssh -i Student#.pem admin@<EIP-of-Management>``
+4.  After connecting via SSH issue the command ``modify auth password admin`` - change the admin password to one that you will remember
+5.  Save the password change by issuing the command ``save sys config``
+6.  You can now connect to the BIG-IP Web UI on HTTPS using the EIP for the management interface (bypass the self-signed cert warning) and the credentials admin/<password-from-step-3>
 
 
 .. |github| raw:: html
 
-   <a href="https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/standalone/3nic" target="_blank">F5's Github repository</a>
+   <a href="https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/standalone/3nic/existing-stack/payg" target="_blank">F5's Github repository</a>
