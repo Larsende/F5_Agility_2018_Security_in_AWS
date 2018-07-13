@@ -1,5 +1,5 @@
-Securing App with WAF Policy
-============================
+Automating App Deployment
+=========================
 
 
 Expected time to complete: **1 hour**
