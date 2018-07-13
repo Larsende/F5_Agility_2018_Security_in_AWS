@@ -5,7 +5,7 @@ Update Parent WAF Policy
 #. Open browser on jump server and go to ``https://hackazon.f5demo.com/account/documents?page=delivery.html;%20cat%20/etc/passwd``
 #. Enter credentials to login successfully.
 
-   .. image:: ../images/image350.png
+   .. image:: ./images/image350.png
      :height: 350px
 
    .. NOTE::
@@ -18,27 +18,27 @@ Update Parent WAF Policy
 #. Open the **Security->Application Security->Security Policies->Policies List** page
 #. Select ``waf_base`` then click ``waf_base`` to view properties
 
-   .. image:: ../images/image351.png
+   .. image:: ./images/image351.png
      :height: 200px
 
-   .. image:: ../images/image352.png
+   .. image:: ./images/image352.png
      :height: 200px
 
 #. Click on ``Attack Signatures Configuration``
 #. On the **Attack Signatures** section click **Change**
 
-   .. image:: ../images/image353.png
+   .. image:: ./images/image353.png
      :height: 100px
 
 #. Click **OS Command Injection Signatures** check box then click **Change**
 
-   .. image:: ../images/image354.png
+   .. image:: ./images/image354.png
      :height: 350px
 
 #. Click **Save** at the bottom of the properties page
 #. Click **Apply Policy** to commit changes
 
-   .. image:: ../images/image343.png
+   .. image:: ./images/image343.png
      :height: 50px
 
 **Task 6 - Repeat simulated command injection attack**

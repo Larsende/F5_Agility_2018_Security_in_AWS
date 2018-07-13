@@ -17,7 +17,7 @@ Create Credentials Protection WAF Child Policy
 #. Browse to ``https://hackazon.f5demo.com/user/login`` and login as ``bigmac``
 #. Once successfully logged in, review log on Developer Tool.  Highlight ``login?return_url=`` and on right panel scroll to bottom of Form Data to view **Username** and **Password**.
 
-   .. image:: ../images/image340.png
+   .. image:: ./images/image340.png
      :height: 400px
 
 **Task 2 - Create new waf policy to mitigate the vulnerabilities using info on table below:**
@@ -41,7 +41,7 @@ Create Credentials Protection WAF Child Policy
 #. Select the Security->Application Security->Security Policies->Policies List page
 #. Click **Create Policy**
 
-   .. image:: ../images/image341.png
+   .. image:: ./images/image341.png
      :height: 300px
 
 **Task 3 - Configure Brute Force Protection**
@@ -49,7 +49,7 @@ Create Credentials Protection WAF Child Policy
 #. Select **Security->Application Security->Sessions and Logins->Login Pages List** page
 #. Click **Create**
 
-   .. image:: ../images/image342.png
+   .. image:: ./images/image342.png
      :height: 300px
 
 #. Open the **Application Security->Anomaly Detection->Brute Force Attack Prevention** page and click **Create**.
@@ -57,7 +57,7 @@ Create Credentials Protection WAF Child Policy
 #. Change **Login Page** drop down box to ``[HTTP]/user/login``
 #. Click **Apply Policy** to commit changes
 
-   .. image:: ../images/image343.png
+   .. image:: ./images/image343.png
      :height: 50px
 
 **Task 4 - Configure Credential Encryption**
@@ -65,17 +65,17 @@ Create Credentials Protection WAF Child Policy
 #. Select **Security->Application Security->Data Protection->DataSafe Profiles**
 #. Click **Create**
 
-   .. image:: ../images/image344.png
+   .. image:: ./images/image344.png
      :height: 100px
 
 #. Enter ``protect_credentials`` for **Profile Name**
 
-   .. image:: ../images/image345.png
+   .. image:: ./images/image345.png
      :height: 300px
 
 #. Select **URL List** and click **Add**
 
-   .. image:: ../images/image346.png
+   .. image:: ./images/image346.png
      :height: 150px
 
 #. Select **Parameters** then enter ``username`` in the **Parameter Name** and click Add
@@ -83,7 +83,7 @@ Create Credentials Protection WAF Child Policy
 #. Enter ``password`` in the **Parameter Name** and click Add
 #. Check **Encrypt** check box
 
-   .. image:: ../images/image347.png
+   .. image:: ./images/image347.png
      :height: 150px
 
 #. Click **Login Page Properties**
@@ -91,7 +91,7 @@ Create Credentials Protection WAF Child Policy
 #. Enter ``My Account`` for **A string should appear**
 #. Enter ``Username or password are incorrect`` for **A string that should NOT appear**
 
-   .. image:: ../images/image348.png
+   .. image:: ./images/image348.png
      :height: 300px
 #. Click **Save**
 
@@ -103,7 +103,7 @@ Create Credentials Protection WAF Child Policy
 #. Enable **Anti-Fraud Profile** and select ``protect_credentials``
 #. Click **Update**
 
-   .. image:: ../images/image349.png
+   .. image:: ./images/image349.png
      :height: 300px
 
 **Task 6 - Repeat simulated credential attacks**

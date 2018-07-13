@@ -44,12 +44,12 @@ Create Base WAF Child Policy
 #. Select ``hackazon_vs`` for **Virtual Server**
 #. Change **Enforcement Mode** to **Blocking**
 
-   .. image:: ../images/image311.png
+   .. image:: ./images/image311.png
      :height: 400px
 
 #. Click **Create Policy**
 
-   .. image:: ../images/image312.png
+   .. image:: ./images/image312.png
      :height: 400px
 
    .. NOTE::
@@ -68,13 +68,13 @@ Create Base WAF Child Policy
 #. Ensure **waf_log** profile is selected in the Log Profile
 #. Select **update**
 
-   .. image:: ../images/image313.png
+   .. image:: ./images/image313.png
      :height: 300px
 
 #. Open browser on jump server and go to ``https://hackazon.f5demo.com``
 #. Enter ``%' or 1='1`` in Search field and press Enter.  You should receive a block message similar to below. Take note of the Support ID number.
 
-   .. image:: ../images/image314.png
+   .. image:: ./images/image314.png
      :height: 70px
 
 #. Return to hackazon main page
@@ -85,7 +85,7 @@ Create Base WAF Child Policy
 #. Select the **Security->Event Logs->Application->Requests** page
 #. Select the ``Event`` with the matching ``Support ID`` noted on the block pages
 
-   .. image:: ../images/image315.png
+   .. image:: ./images/image315.png
      :height: 300px
 
 
@@ -95,5 +95,5 @@ Create Base WAF Child Policy
 
 #. Select ``Attack Signatures Detected`` to view details of the request that triggered the violation.
 
-   .. image:: ../images/image316.png
+   .. image:: ./images/image316.png
      :height: 200px

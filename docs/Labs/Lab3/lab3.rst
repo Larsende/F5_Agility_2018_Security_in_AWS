@@ -8,4 +8,8 @@ Expected time to complete: **1 hour**
    :maxdepth: 1
    :glob:
 
-   module*
+   module1
+   module2
+   module3
+   module4
+   module5

@@ -25,7 +25,7 @@ Create WAF Parent Policy
 #. Click **Create New Policy**
 #. Select **Advanced** options
 
-   .. image:: ../images/image308.png
+   .. image:: ./images/image308.png
      :height: 30px
 
 #. Enter ``waf_base`` for **Policy Name**
@@ -35,14 +35,14 @@ Create WAF Parent Policy
 #. Change **Enforcement Mode** to **Blocking**
 #. Change **Signature Staging** to **Disabled**
 
-   .. image:: ../images/image309.png
+   .. image:: ./images/image309.png
      :height: 400px
 
 #. Click **Create Policy**
 #. Once the policy is created, with ``parent_policy`` selected, in the right panel click ``Inheritance Settings``.
 #. Configure the following inheritance settings, and then click **Save Changes**
 
-   .. image:: ../images/image310.png
+   .. image:: ./images/image310.png
      :height: 400px
 
 .. NOTE::
