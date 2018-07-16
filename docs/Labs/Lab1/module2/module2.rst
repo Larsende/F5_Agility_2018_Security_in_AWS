@@ -35,7 +35,7 @@ Next, we're ready to deploy the CFT.
 3. Create a :guilabel:`Stack name` of ``Student#-CFT``
 4. Find your ``Student#`` VPC in the drop down.
 5. Select the Management, External, and Internal subnets in the drop downs.
-6. Change the :guilabel:`BIG-IP Image Name` to ``Good25Mbps``
+6. Change the :guilabel:`BIG-IP Image Name` to ``Best25Mbps``
 7. Change the :guilabel:`AWS Instance Size` to ``t2.medium``.
 8. Utilize the ``Student#-BIG-IP`` key in the drop down for :guilabel:`SSH Key`
 9. Enter the Lab Public IP (this will be given in the classroom) in the :guilabel:`Source Address(es) for Management Access`

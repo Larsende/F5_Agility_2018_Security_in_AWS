@@ -5,7 +5,7 @@ There are some vulnerabilities in the default HTTPS access of the management on 
 
 #. Log in to SSH by using the same method previously used to change admin password.:
 
-     ssh -i studentx.pem ec2-34-230-154-203.compute-1.amazonaws.com
+     ssh -i studentx-BIG-IP.pem <EIP Host Address for Management network>
 
 #. Before you change the SSL cipher string, you should review the existing string for your specific BIG-IP version. To list the currently configured cipher string, type the following command:
     
@@ -19,7 +19,7 @@ There are some vulnerabilities in the default HTTPS access of the management on 
 
      modify /sys httpd ssl-ciphersuite 'ALL:!ADH:!EXPORT:!eNULL:!MD5:!DES:!SSLv2:-TLSv1:-SSLv3:RC4-SHA'
 
-   Alternatively, if you can restrict to only TLS 1.1 and TLS 1.2 ciphers, then type the following command instead:
+   Alternatively, if you want to restrict to only TLS 1.1 and TLS 1.2 ciphers, then type the following command instead:
 
      modify /sys httpd ssl-ciphersuite 'ALL:!ADH:!EXPORT:!eNULL:!MD5:!DES:!SSLv2:!SSLv3:!TLSv1'
 
