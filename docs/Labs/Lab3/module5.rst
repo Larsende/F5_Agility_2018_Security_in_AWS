@@ -2,7 +2,7 @@ Update Parent WAF Policy
 ------------------------
 **Task 1 - Simulate attacks to demonstrate newly discovered vulnerability.**
 
-#. Open browser on jump server and go to ``https://hackazon.f5demo.com/account/documents?page=delivery.html;%20cat%20/etc/passwd``
+#. Open browser on jump server and go to ``https://<Elastic IP>/account/documents?page=delivery.html;%20cat%20/etc/passwd``
 #. Enter credentials to login successfully.
 
    .. image:: ./images/image350.png
@@ -43,7 +43,7 @@ Update Parent WAF Policy
 
 **Task 6 - Repeat simulated command injection attack**
 
-#. Open browser on jump server and go to ``https://hackazon.f5demo.com/account/documents?page=delivery.html;%20cat%20/etc/passwd``
+#. Open browser on jump server and go to ``https://<Elastic IP>/account/documents?page=delivery.html;%20cat%20/etc/passwd``
 #. Your request should be rejected.
 
    .. NOTE::
