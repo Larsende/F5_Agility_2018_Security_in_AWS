@@ -27,7 +27,7 @@ First, we need to create and save a key pair.
 
 Next, we're ready to deploy the CFT.
 
-1. From the GitHub page, click the :guilabel:`Launch Stack` button about half-way down the page.  Or got to: "https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?templateURL=https:%2F%2Fs3-external-1.amazonaws.com%2Fcf-templates-k2dflj3mk02p-us-east-1%2F2018201LuF-template191z9ht7gde7&redirectId=DesignTemplate"
+1. From the GitHub page, click the :guilabel:`Launch Stack` button about half-way down the page.  Or got to: |CFT-template|
 
 .. figure:: ../images/CFT_hourly.png
 
@@ -61,3 +61,7 @@ To initially change the password for the BIG-IP management utility we need to co
 .. |github| raw:: html
 
    <a href="https://github.com/F5Networks/f5-aws-cloudformation/tree/master/supported/standalone/3nic/existing-stack/payg" target="_blank">F5's Github repository</a>
+
+.. |CFT-template| raw:: html
+
+   <a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?templateURL=https:%2F%2Fs3-external-1.amazonaws.com%2Fcf-templates-k2dflj3mk02p-us-east-1%2F2018201LuF-template191z9ht7gde7&redirectId=DesignTemplate" target="_blank">F5 Advanced WAF Cloud Formation Template</a>
