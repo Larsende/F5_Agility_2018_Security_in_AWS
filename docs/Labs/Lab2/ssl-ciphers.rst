@@ -6,7 +6,6 @@ Starting in v13.0 the allowed SSL Ciphers can be managed with a combination of S
 SSL Cipher Rules can be combined in the groups as follows:
 
 .. image:: ./images/image201.png
-   :scale: 50 %
 
 #. We will start by creating a SSL Cipher Rule.  Click on **Local Traffic, Ciphers, Rules,** then **Create.**
 

@@ -10,7 +10,6 @@ We will now setup an SSL Offload Virtual Server using the Cipher Group previousl
 #. In the definition of the Elastic IP there will be a **private IP address.**  This IP will become your Virtual Server Destination address:
 
    .. image:: ./images/image202.png
-      :scale: 50 %
 
 #. Go to the F5 Admin page and select **Local Traffic, Profiles, SSL, Client.**
 
@@ -39,7 +38,6 @@ We will now setup an SSL Offload Virtual Server using the Cipher Group previousl
 #. Click on **Finished.**
 
    .. image:: ./images/image204.png
-      :scale: 50 %
 
 #. Go to **Local Traffic, Virtual Servers.**
 
@@ -62,6 +60,5 @@ We will now setup an SSL Offload Virtual Server using the Cipher Group previousl
 #. Click on Finished.
 
    .. image:: ./images/image205.png
-      :scale: 50 %
 
 #. Now take the Elastic IP you found earlier and open a web browser and go to 'https://<Elastic IP>'.  You will get a certificate error for mismatch but after ignoring the certificate error you should start seeing the hackazon web page.
