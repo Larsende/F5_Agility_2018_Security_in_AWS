@@ -23,7 +23,6 @@ We will now setup an SSL Offload Virtual Server using the Cipher Group previousl
 #. Select the checkbox to **modify Ciphers** and select **Cipher Group** and in the dropdown select your Cipher Group that you created.
 
    .. image:: ./images/image203.png
-      :scale: 50 %
 
 #. Leave other options as default and click on **Finished.**
 
