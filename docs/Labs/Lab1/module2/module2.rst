@@ -48,6 +48,9 @@ To initially change the password for the BIG-IP management utility we need to co
 4.  After connecting via SSH issue the command ``modify auth password admin`` - change the admin password to one that you will remember
 5.  Save the password change by issuing the command ``save sys config``
 6.  You can now connect to the BIG-IP Web UI on HTTPS using the EIP for the management interface (bypass the self-signed cert warning) and the credentials admin/<password-from-step-4>
+#.  Once logged in to the F5 management console click on System, Resource Provisioning.
+#.  Select ASM and Fraud Protection Service.
+#.  Click on Submit and then OK.  The admin console will be inaccessible for a couple minutes as the new options are enabled.
 
 
 .. |github| raw:: html
