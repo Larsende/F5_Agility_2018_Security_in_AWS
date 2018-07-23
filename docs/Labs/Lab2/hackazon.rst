@@ -51,7 +51,7 @@ We will now setup an SSL Offload Virtual Server using the Cipher Group previousl
 
 #. Select the **HTTP Profile** of HTTP.
 
-#. Select the hackazon_clientssl.prf SSL Profile (client) and put it into Selected.
+#. Select the studentX_clientssl.prf SSL Profile (client) and put it into Selected.
 
 #. Select **Automap** in the Source Address Translation option.
 
