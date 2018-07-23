@@ -43,7 +43,7 @@ We will now setup an SSL Offload Virtual Server using the Cipher Group previousl
 
 #. Click on **Create.**
 
-#. Give the virtual server a name such as hackazon.vs.
+#. Give the virtual server a name such as hackazon_vs.
 
 #. Enter the **destination address** that you determined earlier from the Elastic IP information.
 
