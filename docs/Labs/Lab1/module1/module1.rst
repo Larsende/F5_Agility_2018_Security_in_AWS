@@ -32,122 +32,25 @@ All labs as part of this class will be done through the AWS Management Console. 
 
 .. figure:: ../images/login_example.png
 
-**Important! Ensure all you are in the US East (N. Virginia) region!**
-
-Prepare
--------
-
-To create a multi-NIC configuration, you must first create an Amazon virtual private cloud (VPC). This is the network environment where your instances will reside.
-
-==== =================================================================================== ====================================================================================================================================================================================================================================================
-Step Task                                                                                Description
-==== =================================================================================== ====================================================================================================================================================================================================================================================
-1    :ref:`Create a VPC with multiple subnets <awsmultivpc>`                             Use the VPC wizard to create a management subnet for administrative access, an external subnet for application access, and a NAT instance for network translation.
-
-                                                                                         - Management subnet (called Public in the AWS UI): ``10.0.0.0/24``
-                                                                                         - External subnet (called Private in the AWS UI): ``10.0.1.0/24``
-                                                                                         - NAT instance and associated network interface.
-
-2    :ref:`Create an internal subnet <awsintsub>`                                        This subnet contains your web servers.
-
-                                                                                         - Internal subnet: ``10.0.2.0/24``
-
-3    :ref:`Add routes so BIG-IP VE can access the Internet <awsroutes>`                  Add the private IP address of the external subnet as the gateway in a route for outbound traffic.
-
-
-==== =================================================================================== ====================================================================================================================================================================================================================================================
-
-\
+**Important! After login, ensure all you are in the US East (N. Virginia) region!**
 
 
 
-.. _awsmultivpc:
+Create a VPC with multiple subnets using a CFT
+``````````````````````````````````````````````
 
-Create a VPC with multiple subnets
-``````````````````````````````````
+You will utilize an instructor provided Cloud Formation Template (CFT) to deploy the required networking in AWS. This deployment will be as shown in the diagram above.
 
-A BIG-IP VE instance must be in an Amazon virtual private cloud (VPC). You can use a wizard to create a VPC that has management and external subnets. You will create the internal subnet separately.
+1. Launch the CFT process for creating the VPC and required networking - |VPC-CFT|
+2. Ensure you are in the ``N. Virginia`` region
+3. At the :guilabel:`Select Template` page, notice that the URL for the template is already entered - select :guilabel:`Next`.
+4. Enter a :guilabel:`Stack name` of ``Student#-VPC-CFT``
+5. At the :guilabel:`Options` page, leave all defaults and select :guilabel:`Next`
+6. At the :guilabel:`Review` page, select :guilabel:`Create`
+7. You're taken to the list of CFTs being deployed, refresh the page and watch the status of your's until it says :guilabel:`Create_Complete`
 
-1. In the AWS Management Console, from the Services menu at the top of the screen (scroll down), select VPC, then select :guilabel:`Create VPC`.
-2. Click :menuselection:`Start VPC Wizard -> VPC with Public and Private Subnets`, and then click :guilabel:`Select`.
-3. Complete the wizard with the following entries.
+This concludes Module 1 of Lab 1. Next we will deploy the BIG-IP into this VPC that you've just created.
 
-   The subnet listed as Public in the AWS UI is for management traffic to the BIG-IP Configuration utility. The subnet listed as Private is for application traffic to the BIG-IP VE external VLAN.
-
-   .. figure:: ../images/vpc_multi_subnet.png
-
-   |
-
-4. Leave all other default settings and click :guilabel:`Create VPC`.
-
-
-Note: As everyone in the class is using a shared account, you can filter objects based on your student name in most of the AWS console screens.
-
-.. figure:: ../images/filter.png
-
-.. _awsintsub:
-
-Create an internal subnet
-`````````````````````````
-
-
-Now create the internal subnet in that same availability zone. The internal subnet corresponds to the BIG-IP internal VLAN.
-
-1. In the AWS Management Console, from the Services menu at the top of the screen, select :guilabel:`VPC`.
-2. In the Navigation pane, under Virtual Private Cloud, select :guilabel:`Subnets`. When you used the VPC wizard, you created two subnets: management and external. Note the availability zone for these subnets (for example, us-east-1e).
-3. Click :guilabel:`Create Subnet` and populate the appropriate fields.
-
-   =============================== =========================================
-   Field	                       Value
-   =============================== =========================================
-   :guilabel:`Name tag`	           ``Student#-Internal``
-   :guilabel:`VPC`	               Student#
-   :guilabel:`Availability Zone`   The zone where the other subnets reside
-   :guilabel:`CIDR block`	       ``10.0.2.0/24``
-   =============================== =========================================
-
-   \
-
-4. Click :guilabel:`Yes, Create`.
-
-Your VPC should now have three subnets.
-
-.. figure:: ../images/three_subnets.png
-
-|
-
-
-.. _awsroutes:
-
-Add routes so BIG-IP VE can access the Internet
-```````````````````````````````````````````````
-
-By default, AWS will not allow traffic from the management and external subnets to leave the VPC. You must add the BIG-IP external self IP address to the routing table for outbound traffic for the VPC.
-
-1. In the AWS Management Console, from the Services menu at the top of the screen, select :guilabel:`VPC`.
-2. In the Navigation pane, under Virtual Private Cloud, select :guilabel:`Route Tables`.
-3. Filter for your Student#, and then select the routing table with one subnet.
-
-   .. figure:: ../images/routes1.png
-
-   |
-
-4. Click the Subnet Associations tab at the bottom of the screen.
-5. Click :guilabel:`Edit`.
-
-   .. figure:: ../images/routes2.png
-
-   |
-
-6. Select the check box for the external subnet, ``10.0.1.0/24``.
-
-   .. figure:: ../images/routes3.png
-
-   |
-
-7. Click :guilabel:`Save`.
-
-The management and external subnets are now explicitly associated with the route table.
 
 
 .. |github| raw:: html
@@ -161,4 +64,8 @@ The management and external subnets are now explicitly associated with the route
 .. |login| raw:: html
 
    <a href="https://854140829363.signin.aws.amazon.com/console" target="_blank">https://854140829363.signin.aws.amazon.com/console</a>
+
+.. |VPC-CFT| raw:: html
+
+   <a href="https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?templateURL=https://s3-us-west-1.amazonaws.com/agility2018/VPC_with_MGMT_SG_6" target="_blank">F5 AWS VPC Deployment</a>
 
