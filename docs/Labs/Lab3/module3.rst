@@ -17,6 +17,8 @@ Create Base WAF Child Policy
       This is a common ``Cross-site scripting (XSS)`` attack and although this did not return
       anything exciting the search request was accepted and processed with response.
 
+      Also some modern versions of browsers will block this request from displaying a response, but the request was actually sent to the application.  If Chrome blocks it you can try on another browser.
+
 **Task 2 - Create new waf policy to mitigate the vulnerabilities using info on table below:**
 
 .. list-table::
@@ -62,7 +64,7 @@ Create Base WAF Child Policy
 
 **Task 3 - Test WAF policy.**
 
-#. Select the **Virtual Servers->Virtual Servers List** page
+#. Select the **Loacl Traffic->Virtual Servers->Virtual Servers List** page
 #. Click the **hackazon_vs** to display virtual server properties
 #. Click the **Security->Policies** tab to display Policy Settings
 #. Ensure **waf_log** profile is selected in the Log Profile

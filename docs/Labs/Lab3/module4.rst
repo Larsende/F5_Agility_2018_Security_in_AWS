@@ -3,6 +3,18 @@ Create Credentials Protection WAF Child Policy
 **Task 1 - Simulate credential attacks.**
 
 #. Open browser on jump server and go to ``https://<Elastic IP>/user/login``
+#. Click on Create User.
+#. Enter a first and last name.
+#. Enter username of ``bigmac``.
+#. Enter an email address of ``bigmace@f5demo.com``.
+#. Enter a password twice.  (Remember this password for later).
+#. Click on Register
+
+   .. NOTE::
+
+      This will take you to a 503 Service Temporary Unavailable error message.  This is OK because the user was created.
+
+#. Go back to the ``https://<Elastic IP>/user/login`` page and refresh the content.
 #. Enter ``bigmac`` for **Username**
 #. Enter random password for **Password.**  Repeat 5 consecutive times using different password to simulate brute force attack
 
@@ -52,9 +64,10 @@ Create Credentials Protection WAF Child Policy
    .. image:: ./images/image342.png
      :height: 300px
 
+#. Fill in the details as in the image above and click on **Create**.
 #. Open the **Application Security->Anomaly Detection->Brute Force Attack Prevention** page and click **Create**.
 #. Select **Security->Application Security->Anomaly Detection->Brute Force Attack Prevention** then click **Create**
-#. Change **Login Page** drop down box to ``[HTTP]/user/login``
+#. Change **Login Page** drop down box to ``[HTTP]/user/login``.  Click on **Create**.
 #. Click **Apply Policy** to commit changes
 
    .. image:: ./images/image343.png
@@ -62,7 +75,7 @@ Create Credentials Protection WAF Child Policy
 
 **Task 4 - Configure Credential Encryption**
 
-#. Select **Security->Application Security->Data Protection->DataSafe Profiles**
+#. Select **Security->Data Protection->DataSafe Profiles**
 #. Click **Create**
 
    .. image:: ./images/image344.png
@@ -73,12 +86,14 @@ Create Credentials Protection WAF Child Policy
    .. image:: ./images/image345.png
      :height: 300px
 
+#. Click on the `>` next to "Create New Profile" to expand menu.
 #. Select **URL List** and click **Add**
 
    .. image:: ./images/image346.png
      :height: 150px
 
-#. Select **Parameters** then enter ``username`` in the **Parameter Name** and click Add
+#. Enter the URL path ``/user/login``.
+#. Expand the Menu again and Select **Parameters** then enter ``username`` in the **Parameter Name** and click Add
 #. Check **Identify as Username** and **Encrypt** check boxes
 #. Enter ``password`` in the **Parameter Name** and click Add
 #. Check **Encrypt** check box
@@ -93,7 +108,7 @@ Create Credentials Protection WAF Child Policy
 
    .. image:: ./images/image348.png
      :height: 300px
-#. Click **Save**
+#. Click **Create**
 
 **Task 5 - Assign policies to protect Hackazon App**
 

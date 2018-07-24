@@ -32,7 +32,6 @@ Create WAF Parent Policy
 #. Select **Parent** for **Policy Type**
 #. Select **Rapid Deployment Policy** for **Policy Template**
 #. Select **Manual** for **Learning Mode**
-#. Change **Enforcement Mode** to **Blocking**
 #. Change **Signature Staging** to **Disabled**
 
    .. image:: ./images/image309.png
