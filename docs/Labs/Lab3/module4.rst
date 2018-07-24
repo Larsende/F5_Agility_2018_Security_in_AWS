@@ -3,18 +3,6 @@ Create Credentials Protection WAF Child Policy
 **Task 1 - Simulate credential attacks.**
 
 #. Open browser on jump server and go to ``https://<Elastic IP>/user/login``
-#. Click on Create User.
-#. Enter a first and last name.
-#. Enter username of ``bigmac``.
-#. Enter an email address of ``bigmace@f5demo.com``.
-#. Enter a password twice.  (Remember this password for later).
-#. Click on Register
-
-   .. NOTE::
-
-      This will take you to a 503 Service Temporary Unavailable error message.  This is OK because the user was created.
-
-#. Go back to the ``https://<Elastic IP>/user/login`` page and refresh the content.
 #. Enter ``bigmac`` for **Username**
 #. Enter random password for **Password.**  Repeat 5 consecutive times using different password to simulate brute force attack
 
