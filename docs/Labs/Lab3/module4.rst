@@ -3,7 +3,7 @@ Create Credentials Protection WAF Child Policy
 **Task 1 - Simulate credential attacks.**
 
 #. Open browser on jump server and go to ``https://<Elastic IP>/user/login``
-#. Enter ``bigmac`` for **Username**
+#. Enter ``f5student`` for **Username**
 #. Enter random password for **Password.**  Repeat 5 consecutive times using different password to simulate brute force attack
 
    .. NOTE::
@@ -14,7 +14,7 @@ Create Credentials Protection WAF Child Policy
       elongate lockout period.
 
 #. Open new incognito browser and open developer tools. (View->Developer-Developer Tools)
-#. Browse to ``https://<Elastic IP>/user/login`` and login as ``bigmac``
+#. Browse to ``https://<Elastic IP>/user/login`` and login as ``f5student`` with password ``password``
 #. Once successfully logged in, review log on Developer Tool.  Highlight ``login?return_url=`` and on right panel scroll to bottom of Form Data to view **Username** and **Password**.
 
    .. image:: ./images/image340.png
@@ -112,10 +112,10 @@ Create Credentials Protection WAF Child Policy
 **Task 6 - Repeat simulated credential attacks**
 
 #. Open browser and go to ``https://<Elastic IP>/user/login``
-#. Enter ``bigmac`` for **Username**
+#. Enter ``f5student`` for **Username**
 #. Enter random password for **Password.**  Repeat multiple times using different password to simulate brute force attack.  You should receive a captcha challenge after 3 failed attempts.
 #. Enter code from captcha challenge then enter correct credentials to login in successfully.
 
 #. Open new incognito browser on jump server and open developer tools. (View->Developer-Developer Tools)
-#. Browse to ``https://<Elastic IP>/user/login`` and login as ``bigmac``
+#. Browse to ``https://<Elastic IP>/user/login`` and login as ``f5student``
 #. Once successfully logged in, review log on Developer Tool.  Highlight ``login?return_url=`` and on right panel scroll to bottom of Form Data to view encrypted **Username** and **Password**
