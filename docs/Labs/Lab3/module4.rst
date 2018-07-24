@@ -55,7 +55,7 @@ Create Credentials Protection WAF Child Policy
 #. Fill in the details as in the image above and click on **Create**.
 #. Open the **Application Security->Anomaly Detection->Brute Force Attack Prevention** page and click **Create**.
 #. Select **Security->Application Security->Anomaly Detection->Brute Force Attack Prevention** then click **Create**
-#. Change **Login Page** drop down box to ``[HTTP]/user/login``.  Click on **Create**.
+#. Change **Login Page** drop down box to ``[HTTPS]/user/login``.  Click on **Create**.
 #. Click **Apply Policy** to commit changes
 
    .. image:: ./images/image343.png
