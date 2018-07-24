@@ -15,8 +15,6 @@ Create WAF Parent Policy
       - Rapid Deployment Policy
     * - **Learning Mode**
       - manual
-    * - **Enforcement Mode**
-      - Blocking
     * - **Signature Staging**
       - Disabled
 
