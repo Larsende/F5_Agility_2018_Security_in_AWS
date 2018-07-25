@@ -38,7 +38,7 @@ Deploy Jump host
 
 #. Follow instructions for Downloading and Installing the AS3 Package then return after install.  Instructions at `this link`_.
 
-  .. _this link: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/3/userguide/installation.html
+   .. _this link: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/3/userguide/installation.html
 
 **Launch F5 Super-NetOps docker instance**
 
@@ -62,7 +62,7 @@ Deploy Jump host
 
 **Test Ansible communication with BIG-IP**
 
-#. Type ``ssh admin@**BIG-IP Private IP Address (eth0)**``.  If not working, you may need to add **BIG-IP Private IP Address (eth0)** to security group.
+#. Type ``ssh admin@<BIG-IP Private IP Address (eth0)>``.  If not working, you may need to add **BIG-IP Private IP Address (eth0)** to security group.
 #. Type ``ansible-playbook playbooks/cmd.yaml``.  Enter BIG-IP Username and Password when prompted.
 
    .. image:: ./images/image417.png
