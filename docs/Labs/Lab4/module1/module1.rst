@@ -1,2 +1,61 @@
-module 4a
----------
+Deploy Jump host
+----------------
+**Launch new EC2 resource.**
+
+#. In the AWS Management Console, navigate to EC2 and click ``Launch Instance``.
+#. Select ``Amazon Linux AMI 2018.03.0 (HVM), SSD Volume Type - ami-cfe4b2b0``.
+
+   .. image:: ./images/image410.png
+      :height: 200px
+
+#. Select ``t2.micro`` then click ``Next: Configure Instance Details``
+#. Find your ``Student#-VPC-CFT`` Network in the drop down.
+#. Find your ``Student#-VPC-CFT-MgmtSubnet`` Subnet in the drop down.
+#. Select ``Enable`` to Auto-assign Public IP in the drop down.
+#. Expand ``Advanced Details`` on bottom of page and paste the following code into ``User Data`` box.
+
+   .. code::
+
+     #!/bin/bash
+     update -y
+     install -y docker
+     install -y telnet
+     install -y curl
+     install -y ab
+     /sbin/chkconfig --add docker
+     service docker start
+
+#. Click ``Next: Add Storage``
+#. Click ``Next: Add Tags``
+#. Click ``Next: Configure Security Group``
+#. Select ``Existing Security`` and find your ``Student#-VPC-CFT-bigipManagement`` in the drop down.
+#. Click ``Review and Launch``
+#. Click ``Launch``
+#. Utilize the Student#-BIG-IP key in the drop down for SSH Key
+#. Check the I acknowledge that AWS CloudFormation might create IAM resources box and click Launch.
+#. View Instances and and filter for your Student# to see your unamed instance.
+#. Connect to Jump Host using ssh utility. For example; ssh -i "Student#-BIG-IP.pem" ec2-user@<jump_host>
+
+**Launch F5 Super-NetOps docker instance**
+
+#. Type ``sudo docker run -it f5usecases/f5-rs-container:latest``
+#. Type ``git clone https://github.com/gotspam/as3-examples.git``
+#. Type ``cd as3-examples``
+
+**Modify ansible files for your environment**
+#. Type ``vim inventory/hosts`` and change address to your **BIG-IP Private IP Address (eth0)**.
+
+   .. image:: ./images/image415.png
+      :height: 100px
+
+#. Type ``vim roles/hackazon/files/hackazon.json`` and change address to your **BIG-IP Private IP Address** of the Elastic IP found in Lab2.
+
+   .. image:: ./images/image416.png
+      :height: 400px
+
+**Test Ansible communication with BIG-IP**
+#. Type ``ssh admin@**BIG-IP Private IP Address (eth0)**``.  If not working, you may need to add **BIG-IP Private IP Address (eth0)** to security group.
+#. Type ``ansible-playbook playbooks/cmd.yaml``.  Enter BIG-IP Username and Password when prompted.
+
+   .. image:: ./images/image417.png
+      :height: 400px
