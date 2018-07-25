@@ -33,11 +33,17 @@ Deploy Jump host
 #. Click ``Launch``
 #. Utilize the Student#-BIG-IP key in the drop down for SSH Key
 #. Check the I acknowledge that AWS CloudFormation might create IAM resources box and click Launch.
-#. View Instances and and filter for your Student# to see your unamed instance.
-#. Connect to Jump Host using ssh utility. For example; ssh -i "Student#-BIG-IP.pem" ec2-user@<jump_host>
+
+**Prepare BIG-IP to utilize iAppLX Application Services (AS3)**
+
+#. Follow instructions for Downloading and Installing the AS3 Package then return after install.  Instructions at `this link`_.
+
+  .. _this link: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/3/userguide/installation.html
 
 **Launch F5 Super-NetOps docker instance**
 
+#. View Instances and and filter for your Student# to see your unamed instance.
+#. Connect to Jump Host using ssh utility. For example; ssh -i "Student#-BIG-IP.pem" ec2-user@<jump_host>
 #. Type ``sudo docker run -it f5usecases/f5-rs-container:latest``
 #. Type ``git clone https://github.com/gotspam/as3-examples.git``
 #. Type ``cd as3-examples``
