@@ -75,6 +75,7 @@ Deploy Jump host
 #. Click on Add Rule again.
 #. Select HTTPS and then put the IP you found earlier in teh source with a /32.
 #. Click on Save.
+#. Go back to your SSH into the Ansible host.
 #. Type ``ansible-playbook playbooks/cmd.yaml``.  Enter BIG-IP Username and Password when prompted.
 
    .. image:: ./images/image417.png
