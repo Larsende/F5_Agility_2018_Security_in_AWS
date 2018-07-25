@@ -17,11 +17,11 @@ Deploy Jump host
    .. code::
 
      #!/bin/bash
-     update -y
-     install -y docker
-     install -y telnet
-     install -y curl
-     install -y ab
+     yum update -y
+     yum install -y docker
+     yum install -y telnet
+     yum install -y curl
+     yum install -y ab
      /sbin/chkconfig --add docker
      service docker start
 
@@ -62,7 +62,7 @@ Deploy Jump host
 
 **Test Ansible communication with BIG-IP**
 
-#. Type ``ssh admin@<BIG-IP Private IP Address (eth0)>``.  
+#. Type ``ssh admin@<BIG-IP Private IP Address (eth0)>``.  This will timeout so security permissions will need to be added in AWS.  
 #. You will now need to setup security permissions on AWS EC2 console so that Ansible can communicate with the BIG-IP.
 #. In the AWS EC2 console go to Network Interfaces and Filter by your studentID.
 #. Select the Interface labeled "Primary network interface".
@@ -76,6 +76,7 @@ Deploy Jump host
 #. Select HTTPS and then put the IP you found earlier in teh source with a /32.
 #. Click on Save.
 #. Go back to your SSH into the Ansible host.
+#. Type ``ssh admin@<BIG-IP Private IP Address (eth0)>``.
 #. Type ``ansible-playbook playbooks/cmd.yaml``.  Enter BIG-IP Username and Password when prompted.
 
    .. image:: ./images/image417.png
