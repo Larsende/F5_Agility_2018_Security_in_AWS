@@ -50,7 +50,7 @@ Deploy Jump host
 
 **Modify ansible files for your environment**
 
-#. Type ``vim inventory/hosts`` and change address to your **BIG-IP Private IP Address (eth0)**.
+#. Type ``vim inventory/hosts`` and change address to your **BIG-IP Private IP Address (eth0)**.  This is the BIG-IP Management IP and is typically the first **Private IP** listed or by clicking on eth0.
 
    .. image:: ./images/image415.png
       :height: 50px
@@ -62,7 +62,7 @@ Deploy Jump host
 
 **Test Ansible communication with BIG-IP**
 
-#. Type ``ssh admin@<BIG-IP Private IP Address (eth0)>``.  If not working, you may need to add **BIG-IP Private IP Address (eth0)** to security group.
+#. Type ``ssh admin@<BIG-IP Private IP Address (eth0)>``.  If not working, you may need to add **BIG-IP Private IP Address (eth0)** to your BIGIP Management Security group.
 #. Type ``ansible-playbook playbooks/cmd.yaml``.  Enter BIG-IP Username and Password when prompted.
 
    .. image:: ./images/image417.png
