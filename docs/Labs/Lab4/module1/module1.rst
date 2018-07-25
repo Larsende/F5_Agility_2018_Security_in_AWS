@@ -32,7 +32,7 @@ Deploy Jump host
 #. Click ``Review and Launch``
 #. Click ``Launch``
 #. Utilize the Student#-BIG-IP key in the drop down for SSH Key
-#. Check the I acknowledge that AWS CloudFormation might create IAM resources box and click Launch.
+#. Check the I acknowledge that AWS CloudFormation might create IAM resources box and click Launch Instances.
 
 **Prepare BIG-IP to utilize iAppLX Application Services (AS3)**
 
@@ -62,7 +62,19 @@ Deploy Jump host
 
 **Test Ansible communication with BIG-IP**
 
-#. Type ``ssh admin@<BIG-IP Private IP Address (eth0)>``.  If not working, you may need to add **BIG-IP Private IP Address (eth0)** to your BIGIP Management Security group.
+#. Type ``ssh admin@<BIG-IP Private IP Address (eth0)>``.  
+#. You will now need to setup security permissions on AWS EC2 console so that Ansible can communicate with the BIG-IP.
+#. In the AWS EC2 console go to Network Interfaces and Filter by your studentID.
+#. Select the Interface labeled "Primary network interface".
+#. In the bottom area look for the "Primary private IPv4 IP:"
+#. Now select Security Groups on the left hand side.
+#. Filter by your Student# and then select the Bigip Management instance.
+#. Click the Inbound tab at the bottom and then select Edit.
+#. Click on Add Rule.
+#. Select SSH and then put the IP you found earlier in the source with a /32.
+#. Click on Add Rule again.
+#. Select HTTPS and then put the IP you found earlier in teh source with a /32.
+#. Click on Save.
 #. Type ``ansible-playbook playbooks/cmd.yaml``.  Enter BIG-IP Username and Password when prompted.
 
    .. image:: ./images/image417.png
