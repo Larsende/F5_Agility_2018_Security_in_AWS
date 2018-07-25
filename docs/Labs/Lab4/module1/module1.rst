@@ -43,10 +43,11 @@ Deploy Jump host
 #. Type ``cd as3-examples``
 
 **Modify ansible files for your environment**
+
 #. Type ``vim inventory/hosts`` and change address to your **BIG-IP Private IP Address (eth0)**.
 
    .. image:: ./images/image415.png
-      :height: 100px
+      :height: 50px
 
 #. Type ``vim roles/hackazon/files/hackazon.json`` and change address to your **BIG-IP Private IP Address** of the Elastic IP found in Lab2.
 
@@ -54,6 +55,7 @@ Deploy Jump host
       :height: 400px
 
 **Test Ansible communication with BIG-IP**
+
 #. Type ``ssh admin@**BIG-IP Private IP Address (eth0)**``.  If not working, you may need to add **BIG-IP Private IP Address (eth0)** to security group.
 #. Type ``ansible-playbook playbooks/cmd.yaml``.  Enter BIG-IP Username and Password when prompted.
 
