@@ -15,7 +15,7 @@ We will now setup an SSL Offload Virtual Server using the Cipher Group previousl
 
 #. Click on **Create.**
 
-#. Enter a name for your SSL profile such as **studentX-clientssl.prf.**
+#. Enter a name for your SSL profile such as **hackazon-clientssl.prf.**
 
 #. Select **Advanced** configuration.
 
