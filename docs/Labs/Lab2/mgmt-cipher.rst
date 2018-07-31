@@ -5,7 +5,7 @@ There are some vulnerabilities in the default HTTPS access of the management on 
 
 #. Log in to SSH by using the same method previously used to change admin password.:
 
-     ssh -i studentx-BIG-IP.pem <EIP Host Address for Management network>
+     ssh -i studentx-BIG-IP.pem admin@<EIP Host Address for Management network>
 
 #. Before you change the SSL cipher string, you should review the existing string for your specific BIG-IP version. To list the currently configured cipher string, type the following command:
     
