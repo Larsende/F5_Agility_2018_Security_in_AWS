@@ -17,11 +17,11 @@ There are some vulnerabilities in the default HTTPS access of the management on 
 
 #. To restrict Configuration utility access to clients using TLS 1.2 or RC4-SHA ciphers, type the following command:
 
-     modify /sys httpd ssl-ciphersuite 'ALL:!ADH:!EXPORT:!eNULL:!MD5:!DES:!SSLv2:-TLSv1:-SSLv3:RC4-SHA'
+     modify /sys httpd ssl-ciphersuite ALL:!ADH:!EXPORT:!eNULL:!MD5:!DES:!SSLv2:-TLSv1:-SSLv3:RC4-SHA
 
    Alternatively, if you want to restrict to only TLS 1.1 and TLS 1.2 ciphers, then type the following command instead:
 
-     modify /sys httpd ssl-ciphersuite 'ALL:!ADH:!EXPORT:!eNULL:!MD5:!DES:!SSLv2:!SSLv3:!TLSv1'
+     modify /sys httpd ssl-ciphersuite ALL:!ADH:!EXPORT:!eNULL:!MD5:!DES:!SSLv2:!SSLv3:!TLSv1
 
 #. Save the configuration change by typing the following command:
 
