@@ -15,7 +15,7 @@ Create Credentials Protection WAF Child Policy
 
 #. Open new incognito browser and open developer tools. (View->Developer-Developer Tools)
 #. Browse to ``https://<Elastic IP>/user/login`` and login as ``f5student`` with password ``password``
-#. Once successfully logged in, review log on Developer Tool.  Highlight ``login?return_url=`` and on right panel scroll to bottom of Form Data to view **Username** and **Password**.
+#. Once successfully logged in, review log on Developer Tool.  Select ``Network`` tab, highlight ``login?return_url=`` and on right panel scroll to bottom of Form Data to view **Username** and **Password**.
 
    .. image:: ./images/image340.png
      :height: 400px
@@ -38,10 +38,15 @@ Create Credentials Protection WAF Child Policy
     * - **Enforcement Mode**
       - Blocking
 
-#. Select the Security->Application Security->Security Policies->Policies List page
-#. Click **Create Policy**
+#. Select the **Security->Application Security->Security Policies->Policies List** page
+#. Click **Create New Policy** then click ``Advanced`` and enter info as shown below.
 
    .. image:: ./images/image341.png
+     :height: 300px
+
+#. Click ``Create Policy``
+
+   .. image:: ./images/image339.png
      :height: 300px
 
 **Task 3 - Configure Brute Force Protection**
@@ -52,11 +57,10 @@ Create Credentials Protection WAF Child Policy
    .. image:: ./images/image342.png
      :height: 300px
 
-#. Fill in the details as in the image above and click on **Create**.
-#. Open the **Application Security->Anomaly Detection->Brute Force Attack Prevention** page and click **Create**.
+#. Fill in the details as in the image above and click on **Create**
 #. Select **Security->Application Security->Anomaly Detection->Brute Force Attack Prevention** then click **Create**
-#. Change **Login Page** drop down box to ``[HTTPS]/user/login``.  Click on **Create**.
-#. Click **Apply Policy** to commit changes
+#. Change **Login Page** drop down box to ``[HTTPS]/user/login``.  Click on **Create** under Apply Policy.
+#. Click **Apply Policy** then **OK** to commit changes
 
    .. image:: ./images/image343.png
      :height: 50px
@@ -115,7 +119,9 @@ Create Credentials Protection WAF Child Policy
 #. Enter ``f5student`` for **Username**
 #. Enter random password for **Password.**  Repeat multiple times using different password to simulate brute force attack.  You should receive a captcha challenge after 3 failed attempts.
 #. Enter code from captcha challenge then enter correct credentials to login in successfully.
-
 #. Open new incognito browser on jump server and open developer tools. (View->Developer-Developer Tools)
 #. Browse to ``https://<Elastic IP>/user/login`` and login as ``f5student``
 #. Once successfully logged in, review log on Developer Tool.  Highlight ``login?return_url=`` and on right panel scroll to bottom of Form Data to view encrypted **Username** and **Password**
+
+   .. image:: ./images/image355.png
+     :height: 300px

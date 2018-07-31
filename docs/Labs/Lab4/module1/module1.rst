@@ -62,8 +62,7 @@ Deploy Jump host
 
 **Test Ansible communication with BIG-IP**
 
-#. Type ``ssh admin@<BIG-IP Private IP Address (eth0)>``.  This will timeout so security permissions will need to be added in AWS.  
-#. You will now need to setup security permissions on AWS EC2 console so that Ansible can communicate with the BIG-IP.
+You will now need to setup security permissions on AWS EC2 console so that Ansible can communicate with the BIG-IP.
 #. In the AWS EC2 console go to Network Interfaces and Filter by your studentID.
 #. Select the Interface labeled "Primary network interface".
 #. In the bottom area look for the "Primary private IPv4 IP:"
@@ -73,10 +72,10 @@ Deploy Jump host
 #. Click on Add Rule.
 #. Select SSH and then put the IP you found earlier in the source with a /32.
 #. Click on Add Rule again.
-#. Select HTTPS and then put the IP you found earlier in teh source with a /32.
+#. Select HTTPS and then put the IP you found earlier in the source with a /32.
 #. Click on Save.
 #. Go back to your SSH into the Ansible host.
-#. Type ``ssh admin@<BIG-IP Private IP Address (eth0)>``.
+#. Type ``ssh admin@<BIG-IP Private IP Address (eth0)>``.  After successfully logging in, type ``quit`` to disconnect ssh session.
 #. Type ``ansible-playbook playbooks/cmd.yaml``.  Enter BIG-IP Username and Password when prompted.
 
    .. image:: ./images/image417.png
