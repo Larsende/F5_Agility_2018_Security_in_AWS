@@ -1,7 +1,7 @@
 Create AWS VPC and Networking
 -----------------------------
 
-The first module is create the AWS VPC and required networking. Module 2 will build upon this deployment.
+The first module is to create the AWS VPC and required networking. Module 2 will build upon this deployment.
 
 The following diagram shows a basic multi-NIC deployment of BIG-IP VE in an Amazon Virtual Private Cloud (VPC).
 
@@ -44,7 +44,7 @@ You will utilize an instructor provided Cloud Formation Template (CFT) to deploy
 1. Launch the CFT process for creating the VPC and required networking by clicking on this link - |VPC-CFT|
 2. Ensure you are in the ``N. Virginia`` region
 3. At the :guilabel:`Select Template` page, notice that the URL for the template is already entered - select :guilabel:`Next`.
-4. Enter a :guilabel:`Stack name` of ``Student#-VPC-CFT``
+4. Enter a :guilabel:`Stack name` of ``Student#-VPC-CFT`` and select :guilabel:`Next`
 5. At the :guilabel:`Options` page, leave all defaults and select :guilabel:`Next`
 6. At the :guilabel:`Review` page, select :guilabel:`Create`
 7. You're taken to the list of CFTs being deployed, refresh the page and watch the status of your's until it says :guilabel:`Create_Complete`
