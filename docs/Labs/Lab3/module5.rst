@@ -43,7 +43,7 @@ Update Parent WAF Policy
 
 **Task 6 - Repeat simulated command injection attack**
 
-#. Open browser on jump server and go to ``https://<Elastic IP>/account/documents?page=delivery.html;%20cat%20/etc/passwd``
+#. Open browser and go to ``https://<Elastic IP>/account/documents?page=delivery.html;%20cat%20/etc/passwd``
 #. Your request should be rejected.
 
    .. NOTE::
