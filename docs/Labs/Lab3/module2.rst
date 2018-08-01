@@ -36,7 +36,7 @@ Create WAF Parent Policy
      :height: 400px
 
 #. Click **Create Policy**
-#. Once the policy is created, with ``parent_policy`` selected, in the right panel click ``Inheritance Settings``.
+#. Once the policy is created, with the ``waf_base`` policy selected, in the right panel click ``Inheritance Settings``.
 #. Configure the following inheritance settings, and then click **Save Changes**
 
    .. image:: ./images/image310.png
