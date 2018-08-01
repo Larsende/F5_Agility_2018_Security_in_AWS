@@ -3,7 +3,7 @@ Setting up Hackazon Virtual Server
 
 We will now setup an SSL Offload Virtual Server using the Cipher Group previously configured.
 
-#. Start in the AWS console and select **Instances.**  Select your studentX instance of the BIG-IP.
+#. Start in the AWS console, Select Services and then EC2. Select **Instances.**  Select your studentX instance of the BIG-IP.
 
 #. In the description for the instance there is a list of **Elastic IPs.**  Click on the last one in the list.  It will also not have a * at the end of the IP address.
 
