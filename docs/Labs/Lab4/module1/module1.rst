@@ -65,7 +65,7 @@ Deploy Jump host
 You will now need to setup security permissions on AWS EC2 console so that Ansible can communicate with the BIG-IP.
 
 #. In the AWS EC2 console go to Network Interfaces and Filter by your studentID.
-#. Select the Interface labeled "Primary network interface".
+#. Select the Interface with the description labeled "Primary network interface".
 #. In the bottom area look for the "Primary private IPv4 IP:"
 #. Now select Security Groups on the left hand side.
 #. Filter by your Student# and then select the Bigip Management instance.
