@@ -23,7 +23,7 @@ SSL Cipher Rules can be combined in the groups as follows:
 
 #. Enter a name for the Cipher Group such as **hackazon-ciphergroup.**
 
-#. Select the **StudentX-cipherrule** previously created and add it to the **"Allow the Following" category.** 
+#. Select the **hackazon-cipherrule** previously created and add it to the **"Allow the Following" category.** 
 
 #. Down at the bottom of the Cipher Group configuration will be the allowed Ciphers.  With the above string you will get a security configuration that will still allow some older clients like WindowsXP and IE8.  You can further secure it by removing TLSv1 or making it so the default f5-ecc cipher rule is in the "Restrict the Allowed List to the Following."
 
