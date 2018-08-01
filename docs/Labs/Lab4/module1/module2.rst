@@ -18,7 +18,7 @@ Deploy Hackazon App using F5 Declarative AS3 Template
 #. From the BIG-IP GUI, select **Local Traffic->Virtual Servers** page and note no virtual server is listed.
 #. Select ``Hackazon`` on the Partition drop down menu to reveal ``serviceMain`` virtual server.
 
-   .. image:: ./images/image420.png
+   .. image:: ./images/image419.png
       :height: 400px
 
 #. Open a browser and ensure hackazon app is working again.
