@@ -65,7 +65,7 @@ Create Base WAF Child Policy
 
 **Task 3 - Test WAF policy.**
 
-#. Select the **Loacl Traffic->Virtual Servers->Virtual Servers List** page
+#. Select the **Local Traffic->Virtual Servers->Virtual Servers List** page
 #. Click the **hackazon_vs** to display virtual server properties
 #. Click the **Security->Policies** tab to display Policy Settings
 #. Ensure **waf_log** profile is selected in the Log Profile
