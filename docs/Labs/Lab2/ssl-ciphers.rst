@@ -9,7 +9,7 @@ SSL Cipher Rules can be combined in the groups as follows:
 
 #. We will start by creating a SSL Cipher Rule.  Click on **Local Traffic, Ciphers, Rules,** then **Create.**
 
-#. Enter a name for the rule such as **StudentX-cipherrule.**
+#. Enter a name for the rule such as **hackazon-cipherrule.**
 
 #. Enter the following Cipher String
 
@@ -21,7 +21,7 @@ SSL Cipher Rules can be combined in the groups as follows:
 
 #. Click on **Create.**
 
-#. Enter a name for the Cipher Group such as **StudentX-ciphergroup.**
+#. Enter a name for the Cipher Group such as **hackazon-ciphergroup.**
 
 #. Select the **StudentX-cipherrule** previously created and add it to the **"Allow the Following" category.** 
 

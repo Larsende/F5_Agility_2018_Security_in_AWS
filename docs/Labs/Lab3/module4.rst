@@ -78,7 +78,7 @@ Create Credentials Protection WAF Child Policy
    .. image:: ./images/image345.png
      :height: 300px
 
-#. Click on the `>` next to "Create New Profile" to expand menu.
+#. Click on the **`>`** next to "Create New Profile" to expand menu.
 #. Select **URL List** and click **Add**
 
    .. image:: ./images/image346.png

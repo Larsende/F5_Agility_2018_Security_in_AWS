@@ -43,6 +43,7 @@ Create Base WAF Child Policy
 #. Enter ``waf_baseOnly`` for **Policy Name**
 #. Select **Security** for **Policy Type**
 #. Enter ``waf_base`` for **Parent Policy**
+#. Select OK to accept warning
 #. Select ``hackazon_vs`` for **Virtual Server**
 #. Change **Enforcement Mode** to **Blocking**
 
