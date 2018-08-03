@@ -1,3 +1,7 @@
 _build/*
 docs/_build/*
 f5-sphinx-theme
+lib/*
+bin/python/*
+bin/*
+lib/*

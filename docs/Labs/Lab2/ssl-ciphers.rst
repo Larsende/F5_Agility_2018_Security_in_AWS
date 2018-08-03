@@ -1,7 +1,7 @@
 Securing the SSL for the Application
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Starting in v13.0 the allowed SSL Ciphers can be managed with a combination of SSL Cipher Rules and Cipher Groups.  Using a combination of these rules you can create a secure ClientSSL profile that will protect your app and allow the clients necessary.  
+Starting in v13.0 the allowed SSL Ciphers can be managed with a combination of SSL Cipher Rules to create a Cipher Group.  Using a combination of the Cipher Rules you can create a secure Cipher Group that will protect your application and allow only the clients with good ciphers necessary for your needs.  
 
 SSL Cipher Rules can be combined in the groups as follows:
 
