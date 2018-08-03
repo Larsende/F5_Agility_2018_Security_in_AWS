@@ -8,7 +8,7 @@ Starting in v13.0 the allowed SSL Ciphers can be managed with a combination of S
    .. image:: ./images/image201.png
       :height: 200px
 
-#. We will start by creating a SSL Cipher Rule.  Click on **Local Traffic --> Ciphers --> Rules** then **Create.**
+#. We will start by creating a SSL Cipher Rule.  Click on **Local Traffic -> Ciphers -> Rules** then **Create.**
 
 #. Enter a name for the rule **hackazon-cipherrule.**
 
