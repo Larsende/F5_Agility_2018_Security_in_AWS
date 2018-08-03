@@ -6,11 +6,11 @@ Starting in v13.0 the allowed SSL Ciphers can be managed with a combination of S
 **SSL Cipher Rules can be combined in the groups as follows:**
 
    .. image:: ./images/image201.png
-      :height: 200px
+      :height: 400px
 
 #. We will start by creating a SSL Cipher Rule.  Click on **Local Traffic -> Ciphers -> Rules** then **Create.**
 
-#. Enter a name for the rule **hackazon-cipherrule.**
+#. Enter ``hackazon-cipherrule`` for the name.
 
 #. Enter the following Cipher String
 
@@ -22,10 +22,10 @@ Starting in v13.0 the allowed SSL Ciphers can be managed with a combination of S
 
 #. Click on **Create.**
 
-#. Enter a name for the Cipher Group **hackazon-ciphergroup.**
+#. Enter ``hackazon-ciphergroup`` for the **Cipher Group name**
 
 #. Select the **hackazon-cipherrule** previously created and add it to the **"Allow the Following" category.** 
 
-#. Down at the bottom of the Cipher Group configuration will be a list of the allowed Ciphers.  With the above string you will get a security configuration that will still allow some older clients like WindowsXP and IE8.  You can further secure it by removing TLSv1 or making it so the default f5-ecc cipher rule is in the "Restrict the Allowed List to the Following."
+#. Down at the bottom of the Cipher Group configuration will be a list of the allowed Ciphers.  With the above string you will get a security configuration that will still allow some older clients like WindowsXP and IE8.  You can further secure it by removing TLSv1 or making it so the default f5-ecc cipher rule is in the **"Restrict the Allowed List to the Following."**
 
 #. Click on **Finished.**

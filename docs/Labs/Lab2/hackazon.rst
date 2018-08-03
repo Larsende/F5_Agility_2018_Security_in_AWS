@@ -7,7 +7,7 @@ Setting up Hackazon Virtual Server
 
 #. Click on **Create.**
 
-#. Enter the name for your SSL profile **hackazon-clientssl.prf.**
+#. Enter ``hackazon-clientssl.prf`` for the **SSL profile name**
 
 #. Select **Advanced** configuration.
 
@@ -21,7 +21,7 @@ Setting up Hackazon Virtual Server
 
 #. Click on **Create**
 
-#. Enter the pool name **hackazon.p**
+#. Enter ``hackazon.p`` for the **pool name**
 
 #. Select the **HTTP health monitor** and move it to Active.
 
@@ -31,7 +31,7 @@ Setting up Hackazon Virtual Server
 
 #. Click on **Finished.**
 
-#. Go to the AWS console, Select Services and then EC2. Select **Instances.**  Filter for your student# instance of the BIG-IP.
+#. Go to the AWS console, Select **Services** and then **EC2**. Select **Instances.**  Filter for your student# and select the checkbox for the one labeled **BIG-IP:Student#-CFT**.
 
 #. In the description for the instance there is a list of **Elastic IPs.**  Click on the last one in the list.  It will also not have a * at the end of the IP address.
 
@@ -41,11 +41,11 @@ Setting up Hackazon Virtual Server
 
    This screenshot illustrates one example. The presented IP addresses will not be the ones you see
 
-#. Go to **Local Traffic -> Virtual Servers.**
+#. Go to F5 Admin page and then **Local Traffic -> Virtual Servers.**
 
 #. Click on **Create.**
 
-#. Give the virtual server the name **hackazon_vs.**
+#. Enter ``hackazon_vs`` for the **virtual server name **
 
 #. Enter as **destination address** the *Private IP address* that you determined earlier from the **Elastic IP information**.
 
@@ -63,4 +63,4 @@ Setting up Hackazon Virtual Server
 
 #. Click on **Finished.**
 
-#. Now take the **Elastic IP** you found earlier in the AWS Console, open a web browser and go to 'https://<Elastic IP>'.  You will get a certificate error for mismatch but after ignoring the certificate error you should start seeing the hackazon web page.
+#. Now take the **Elastic IP** you found earlier in the AWS Console, open a web browser and go to ``https://<Elastic IP>``.  You will get a certificate error because we are not using a domain specific SSL Certificate.  Once ignoring the certificate error you should start seeing the hackazon web page.
