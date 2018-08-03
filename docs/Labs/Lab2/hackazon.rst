@@ -7,7 +7,7 @@ Setting up Hackazon Virtual Server
 
 #. Click on **Create.**
 
-#. Enter a name for your SSL profile **hackazon-clientssl.prf.**
+#. Enter the name for your SSL profile **hackazon-clientssl.prf.**
 
 #. Select **Advanced** configuration.
 
@@ -21,7 +21,7 @@ Setting up Hackazon Virtual Server
 
 #. Click on **Create**
 
-#. Enter a pool name **hackazon.p**
+#. Enter the pool name **hackazon.p**
 
 #. Select the **HTTP health monitor** and move it to Active.
 
@@ -45,9 +45,9 @@ Setting up Hackazon Virtual Server
 
 #. Click on **Create.**
 
-#. Give the virtual server a name such as hackazon_vs.
+#. Give the virtual server the name **hackazon_vs.**
 
-#. Enter as **destination address** the *Private IP address* that you determined earlier from the Elastic IP information in Step 3.
+#. Enter as **destination address** the *Private IP address* that you determined earlier from the **Elastic IP information**.
 
 #. Enter the service port of **443.**
 
@@ -61,7 +61,6 @@ Setting up Hackazon Virtual Server
 
    .. image:: ./images/image205.png
 
-#. Click on Finished.
+#. Click on **Finished.**
 
-
-#. Now take the Elastic IP you found in Step 3 and open a web browser and go to 'https://<Elastic IP>'.  You will get a certificate error for mismatch but after ignoring the certificate error you should start seeing the hackazon web page.
+#. Now take the **Elastic IP** you found earlier in the AWS Console, open a web browser and go to 'https://<Elastic IP>'.  You will get a certificate error for mismatch but after ignoring the certificate error you should start seeing the hackazon web page.
