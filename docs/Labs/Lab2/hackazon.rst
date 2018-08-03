@@ -28,7 +28,7 @@ Setting up Hackazon Virtual Server
 #. Put in the following two IP addresses into the list of pool members both on port 80:  **18.205.1.169**, and **34.239.240.82**
 
    .. image:: ./images/image204.png
-      size:: 400px
+      :height: 400px
 
 #. Click on **Finished.**
 
@@ -61,7 +61,7 @@ Setting up Hackazon Virtual Server
 #. Select the **Default Pool** of **hackazon.p** from the pool dropdown list.
 
    .. image:: ./images/image205.png
-      size:: 500px
+      :height: 500px
 
 #. Click on **Finished.**
 
