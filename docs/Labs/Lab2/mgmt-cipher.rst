@@ -1,11 +1,12 @@
 SSL Security of F5 Management
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-There are some vulnerabilities in the default HTTPS access of the management on the F5 documented here: https://support.f5.com/csp/article/K13400.  To protect against this we will disable all non-TLSv1.2 connections to the management by doing the following via SSH:
+There are some vulnerabilities in the default HTTPS access of the management on the F5 documented here: https://support.f5.com/csp/article/K13400.  
+To protect against this we will disable all non-TLSv1.2 connections to the management by doing the following via SSH:
 
 #. Log in to SSH by using the same method previously used to change admin password.:
 
-     ssh -i studentx-BIG-IP.pem admin@<EIP Host Address for Management network>
+     ssh -i student#-BIG-IP.pem admin@<EIP Host Address for Management network>
 
 #. Before you change the SSL cipher string, you should review the existing string for your specific BIG-IP version. To list the currently configured cipher string, type the following command:
     
