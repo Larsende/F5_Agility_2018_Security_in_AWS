@@ -3,55 +3,58 @@ Deploy the BIG-IP
 
 In Module 2 we will deploy the BIG-IP into the AWS VPC created in Module 1.
 
-
-
 F5 publishes CFTs on a regular basis to Github.
-
-
 
 Launch BIG-IP into existing VPC
 ```````````````````````````````
 
-We'll using the instructor provided CFT to launch a BIG-IP into the VPC that already exists.
+We will use the instructor provided CFT to launch a BIG-IP into the VPC that already exists.
 
 First, we need to create and save a key pair.
 
-1. In the AWS Management Console, navigate to :guilabel:`EC2` and then :guilabel:`Key Pairs`
-2. Click :guilabel:`Create Key Pair` and name it ``Student#-BIG-IP``.
-3. Click :guilabel:`Create` and it will download the ``Student#-BIG-IP.pem`` file to your local machine. Be sure to keep track of this file as you will need it to access the BIG-IP later.
+#. In the AWS Management Console, navigate to :guilabel:`EC2` and then under `Network & Security` to :guilabel:`Key Pairs` 
+#. Click :guilabel:`Create Key Pair` and name it ``Student#-BIG-IP``.
+#. Click :guilabel:`Create` and it will download the ``Student#-BIG-IP.pem`` file to your local machine. Be sure to keep track of this file as you will need it to access the BIG-IP later.
+#.  You will need to change the permissions of the ``Student#-BIG-IP.pem`` key pair. 
+  On a MAC, open a terminal and go to the folder you saved the ``Student#-BIG-IP.pem`` key pair. To change the file permissions type: 
+
+  ``chmod 400 Student#-BIG-IP.pem``
 
 Next, we're ready to deploy the CFT.
 
-1. Got to: |CFT-template|
-2. At the ``Select Template`` page, ensure you are still in the same region where you created your VPC, note the template URL is already selected, and click :guilabel:`Next`.
-3. Create a :guilabel:`Stack name` of ``Student#-BIG-IP-CFT``
-4. Find your ``Student#-VPC-CFT`` VPC in the drop down.
-5. For the :guilabel:`Management Subnet AZ1` select ``Student#-VPC-CFT-MgmtSubnet`` (you may have to scroll down the list).
-6. Similarly, assign the ``Student#-VPC-CFT-External Subnet`` and ``Student#-VPC-CFT-Internal Subnet`` subnets for :guilabel:`Subnet1` and :guilabel:`Subnet2`.
-7. Ensure the :guilabel:`BIG-IP Image Name` is set to ``AWAF25Mbps``
-8. Ensure the :guilabel:`AWS Instance Size` is set to ``t2.large``.
-9. Utilize the ``Student#-BIG-IP`` key in the drop down for :guilabel:`SSH Key`
-10. Enter ``0.0.0.0/0`` in the :guilabel:`Source Address(es) for Management Access`
-11. Enter ``0.0.0.0/0`` in the :guilabel:`Source Address(es) for Web Application Access (80/443)` field.
-12. Leave all other fields at default values and select :guilabel:`Next`.
-13. Leave all fields in the :guilabel:`Options` page at defaults and select :guilabel:`Next`.
-14. Review the settings, check the :guilabel:`I acknowledge that AWS CloudFormation might create IAM resources` box and click :guilabel:`Create`.
-15. Refresh the page to see the status of the deployment.
+#. Got to: |CFT-template|
+#. At the ``Select Template`` page, ensure you are still in the same region where you created your VPC, note the template URL is already selected, and click :guilabel:`Next`.
+#. Create a :guilabel:`Stack name` of ``Student#-BIG-IP-CFT``
+#. Find your ``Student#-VPC-CFT`` VPC in the drop down.
+#. For the :guilabel:`Management Subnet AZ1` select ``Student#-VPC-CFT-MgmtSubnet`` (you may have to scroll down the list).
+#. Similarly, assign the ``Student#-VPC-CFT-External Subnet`` and ``Student#-VPC-CFT-Internal Subnet`` subnets for :guilabel:`Subnet1` and :guilabel:`Subnet2`.
+#. Ensure the :guilabel:`BIG-IP Image Name` is set to ``AWAF25Mbps``
+#. Ensure the :guilabel:`AWS Instance Size` is set to ``t2.large``.
+#. Utilize the ``Student#-BIG-IP`` key in the drop down for :guilabel:`SSH Key`
+#. Enter ``0.0.0.0/0`` in the :guilabel:`Source Address(es) for Management Access`
+#. Enter ``0.0.0.0/0`` in the :guilabel:`Source Address(es) for Web Application Access (80/443)` field.
+#. Leave all other fields at default values and select :guilabel:`Next`.
+#. Leave all fields in the :guilabel:`Options` page at defaults and select :guilabel:`Next`.
+#. Review the settings, check the :guilabel:`I acknowledge that AWS CloudFormation might create IAM resources` box and click :guilabel:`Create`.
+#. Refresh the page to see the status of the deployment. 
+#. Wait until the status of the CFT shows ``CREATE_COMPLETE``
 
 
 Set the admin password for BIG-IP VE
 ````````````````````````````````````
 To initially change the password for the BIG-IP management utility we need to connect via SSH and then modify the admin password.
 
-1.  First, you will need to change the permissions of the ``Student#-BIG-IP.pem`` key pair you saved above. (On a Mac, ``chmod 400 Student#-BIG-IP.pem``)
-2.  Next, find the EIP that the CFT created for the ``Management`` interface of your BIG-IP instance by going to :guilabel:`EC2 -> Network Interfaces` and filtering for ``Student#-BIG-IP``. Note the ``IPv4 Public IP`` address for the ``Management`` interface.
-3.  You can connect using an SSH utility - make sure to use ``admin`` as the username (do not use ``root``) and the ``Management EIP`` from the previous step. Use the ``Student#-BIG-IP.pem`` key pair you saved when you created the instance in Lab 1. For example: ``ssh -i Student#.pem admin@<EIP-of-Management>``
-4.  After connecting via SSH issue the command ``modify auth password admin`` - change the admin password to one that you will remember
-5.  Save the password change by issuing the command ``save sys config``
-6.  You can now connect to the BIG-IP Web UI on HTTPS using the EIP for the management interface (bypass the self-signed cert warning) and the credentials admin/<password-from-step-4>
-7.  Once logged in to the F5 management console click on System, Resource Provisioning.
-8.  Select ASM, Fraud Protection Service, and iRules Language Extensions (iRulesLX).
-9.  Click on Submit and then OK.  The admin console will be inaccessible for a couple minutes as the new options are enabled.
+#. Go to :guilabel:`EC2` -> Instances -> instances
+#.  Find the EIP that the CFT created for the ``Management`` interface of your BIG-IP instance by going to :guilabel:`EC2 -> Network Interfaces` and filtering for ``Student#-BIG-IP``. Note the ``IPv4 Public IP`` address for the ``Management`` interface.
+#. You can connect using an SSH utility - make sure to use ``admin`` as the username (do not use ``root``) and the ``Management EIP`` from the previous step. Use the ``Student#-BIG-IP.pem`` key pair you saved when you created the instance in Lab 1. For example: 
+    ``ssh -i Student#.pem admin@<EIP-of-Management>``
+#.  After connecting via SSH issue the command ``modify auth password admin`` - change the admin password to one that you will remember
+#.  Save the password change by issuing the command ``save sys config``
+#.  You can now connect to the BIG-IP Web UI on HTTPS using the EIP for the management interface (bypass the self-signed cert warning) and the credentials admin/<password-from-step-4>
+#.  Once logged in to the F5 management console click on System, Resource Provisioning.
+#.  Select ASM, Fraud Protection Service, and iRules Language Extensions (iRulesLX).
+#.  Unselect LTM 
+#.  Click on Submit and then OK.  The admin console will be inaccessible for a couple minutes as the new options are enabled.
 
 
 .. |github| raw:: html
