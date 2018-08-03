@@ -6,11 +6,11 @@ Starting in v13.0 the allowed SSL Ciphers can be managed with a combination of S
 **SSL Cipher Rules can be combined in the groups as follows:**
 
    .. image:: ./images/image201.png
-      :height: 400px
+      :height: 500px
 
 #. We will start by creating a SSL Cipher Rule.  Click on **Local Traffic -> Ciphers -> Rules** then **Create.**
 
-#. Enter ``hackazon-cipherrule`` for the name.
+#. Enter **hackazon-cipherrule** for the name.
 
 #. Enter the following Cipher String
 
@@ -22,7 +22,7 @@ Starting in v13.0 the allowed SSL Ciphers can be managed with a combination of S
 
 #. Click on **Create.**
 
-#. Enter ``hackazon-ciphergroup`` for the **Cipher Group name**
+#. Enter **hackazon-ciphergroup** for the **Cipher Group name**
 
 #. Select the **hackazon-cipherrule** previously created and add it to the **"Allow the Following" category.** 
 

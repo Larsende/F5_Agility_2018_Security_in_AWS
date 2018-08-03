@@ -7,7 +7,7 @@ Setting up Hackazon Virtual Server
 
 #. Click on **Create.**
 
-#. Enter ``hackazon-clientssl.prf`` for the **SSL profile name**
+#. Enter **hackazon-clientssl.prf** for the **SSL profile name**
 
 #. Select **Advanced** configuration.
 
@@ -21,13 +21,14 @@ Setting up Hackazon Virtual Server
 
 #. Click on **Create**
 
-#. Enter ``hackazon.p`` for the **pool name**
+#. Enter **hackazon.p** for the **Pool name**
 
 #. Select the **HTTP health monitor** and move it to Active.
 
 #. Put in the following two IP addresses into the list of pool members both on port 80:  **18.205.1.169**, and **34.239.240.82**
 
    .. image:: ./images/image204.png
+      size:: 400px
 
 #. Click on **Finished.**
 
@@ -35,7 +36,7 @@ Setting up Hackazon Virtual Server
 
 #. In the description for the instance there is a list of **Elastic IPs.**  Click on the last one in the list.  It will also not have a * at the end of the IP address.
 
-#. In the definition of the Elastic IP there will be a **private IP address.**  This IP will become your Virtual Server Destination address.
+#. In the definition of the Elastic IP there will be a **Private IP address.**  This IP will become your Virtual Server Destination address.  The **Elastic IP** will be the IP for accessing the application.
 
    .. image:: ./images/image202.png
 
@@ -45,21 +46,22 @@ Setting up Hackazon Virtual Server
 
 #. Click on **Create.**
 
-#. Enter ``hackazon_vs`` for the **virtual server name **
+#. Enter **hackazon_vs** for the **Virtual Server name.**
 
-#. Enter as **destination address** the *Private IP address* that you determined earlier from the **Elastic IP information**.
+#. Enter the **Private IP address** that you determined earlier as part of the **Elastic IP** information in the **Destination Address** field.
 
-#. Enter the service port of **443.**
+#. Enter **443** in the **Service Port.**
 
 #. Select the **HTTP Profile** of HTTP.
 
-#. Select the **hackazon_clientssl.prf** SSL Profile (client) and put it into Selected.
+#. Select the **hackazon_clientssl.prf** SSL Profile (client) from Available and put it into Selected.
 
 #. Select **Automap** in the Source Address Translation option.
 
 #. Select the **Default Pool** of **hackazon.p** from the pool dropdown list.
 
    .. image:: ./images/image205.png
+      size:: 500px
 
 #. Click on **Finished.**
 
