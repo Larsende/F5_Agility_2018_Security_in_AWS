@@ -2,7 +2,7 @@ Create Credentials Protection WAF Child Policy
 ----------------------------------------------
 **Task 1 - Simulate credential attacks.**
 
-#. Open browser on jump server and go to ``https://<Elastic IP>/user/login``
+#. Open browser and go to ``https://<Elastic IP>/user/login``
 #. Enter ``f5student`` for **Username**
 #. Enter random password for **Password.**  Repeat 5 consecutive times using different password to simulate brute force attack
 
@@ -15,7 +15,7 @@ Create Credentials Protection WAF Child Policy
 
 #. Open new incognito browser and open developer tools. (View->Developer-Developer Tools)
 #. Browse to ``https://<Elastic IP>/user/login`` and login as ``f5student`` with password ``password``
-#. Once successfully logged in, review log on Developer Tool.  Select ``Network`` tab, highlight ``login?return_url=`` and on right panel scroll to bottom of Form Data to view **Username** and **Password**.
+#. Once successfully logged in, review log on Developer Tool.  Select ``Network`` tab, highlight ``login?return_url=`` and on right panel click ``Headers`` and scroll to bottom of Form Data to view **Username** and **Password**.
 
    .. image:: ./images/image340.png
      :height: 400px
@@ -38,7 +38,7 @@ Create Credentials Protection WAF Child Policy
     * - **Enforcement Mode**
       - Blocking
 
-#. Select the **Security->Application Security->Security Policies->Policies List** page
+#. Select the **Security -> Application Security -> Security Policies -> Policies List** page
 #. Click **Create New Policy** then click ``Advanced`` and enter info as shown below.
 
    .. image:: ./images/image341.png
@@ -51,14 +51,14 @@ Create Credentials Protection WAF Child Policy
 
 **Task 3 - Configure Brute Force Protection**
 
-#. Select **Security->Application Security->Sessions and Logins->Login Pages List** page
+#. Select **Security -> Application Security -> Sessions and Logins -> Login Pages List** page
 #. Click **Create**
 
    .. image:: ./images/image342.png
      :height: 300px
 
 #. Fill in the details as in the image above and click on **Create**
-#. Select **Security->Application Security->Anomaly Detection->Brute Force Attack Prevention** then click **Create**
+#. Select **Security -> Application Security -> Anomaly Detection -> Brute Force Attack Prevention** then click **Create**
 #. Change **Login Page** drop down box to ``[HTTPS]/user/login``.  Click on **Create** under Apply Policy.
 #. Click **Apply Policy** then **OK** to commit changes
 
@@ -67,7 +67,7 @@ Create Credentials Protection WAF Child Policy
 
 **Task 4 - Configure Credential Encryption**
 
-#. Select **Security->Data Protection->DataSafe Profiles**
+#. Select **Security -> Data Protection -> DataSafe Profiles**
 #. Click **Create**
 
    .. image:: ./images/image344.png
@@ -104,7 +104,7 @@ Create Credentials Protection WAF Child Policy
 
 **Task 5 - Assign policies to protect Hackazon App**
 
-#. Select **Local Traffic->Virtual Servers->Virtual Servers List** and click on ``hackazon_vs``
+#. Select **Local Traffic -> Virtual Servers -> Virtual Servers List** and click on ``hackazon_vs``
 #. Select **Security** then **Policy** tab
 #. Change **Application Security Policy** to ``waf_baseCredentials``
 #. Enable **Anti-Fraud Profile** and select ``protect_credentials``
