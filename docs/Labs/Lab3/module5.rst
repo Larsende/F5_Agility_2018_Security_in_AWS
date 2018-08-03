@@ -2,7 +2,7 @@ Update Parent WAF Policy
 ------------------------
 **Task 1 - Simulate attacks to demonstrate newly discovered vulnerability.**
 
-#. Open browser on jump server and go to ``https://<Elastic IP>/account/documents?page=delivery.html;%20cat%20/etc/passwd``
+#. Open browser and go to ``https://<Elastic IP>/account/documents?page=delivery.html;%20cat%20/etc/passwd``
 #. Enter credentials to login successfully.
 
    .. image:: ./images/image350.png
@@ -15,7 +15,7 @@ Update Parent WAF Policy
 
 **Task 2 - Modify the parent waf policy to mitigate the command injection vulnerability**
 
-#. Open the **Security->Application Security->Security Policies->Policies List** page
+#. Open the **Security -> Application Security -> Security Policies -> Policies List** page
 #. Select ``waf_base`` then click ``waf_base`` to view properties
 
    .. image:: ./images/image351.png

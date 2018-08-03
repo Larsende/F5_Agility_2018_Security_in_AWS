@@ -13,7 +13,7 @@ Create Credentials Protection WAF Child Policy
       for a period of time, however user can continue to repeated attempts to
       elongate lockout period.
 
-#. Open new incognito browser and open developer tools. (View->Developer-Developer Tools)
+#. Open new incognito browser and open developer tools. (In Chrome for example: View -> Developer ->Developer Tools)
 #. Browse to ``https://<Elastic IP>/user/login`` and login as ``f5student`` with password ``password``
 #. Once successfully logged in, review log on Developer Tool.  Select ``Network`` tab, highlight ``login?return_url=`` and on right panel click ``Headers`` and scroll to bottom of Form Data to view **Username** and **Password**.
 
@@ -121,7 +121,7 @@ Create Credentials Protection WAF Child Policy
 #. Enter code from captcha challenge then enter correct credentials to login in successfully.
 #. Open new incognito browser on jump server and open developer tools. (View->Developer-Developer Tools)
 #. Browse to ``https://<Elastic IP>/user/login`` and login as ``f5student``
-#. Once successfully logged in, review log on Developer Tool.  Highlight ``login?return_url=`` and on right panel scroll to bottom of Form Data to view encrypted **Username** and **Password**
+#. Once successfully logged in, review log on Developer Tool.  Select ``Network`` tab, highlight ``login?return_url=`` and on right panel click ``Headers`` and scroll to bottom of Form Data to view **Username** and **Password**.
 
    .. image:: ./images/image355.png
      :height: 300px
