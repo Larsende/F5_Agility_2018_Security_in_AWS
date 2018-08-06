@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to F5 Agility 2018 Security in AWS's documentation!
-===========================================================
+Welcome to F5 Agility 2018 -- Secure BIG-IP and Application deployments in AWS documentation!
+=============================================================================================
 
 .. toctree::
    :maxdepth: 2
