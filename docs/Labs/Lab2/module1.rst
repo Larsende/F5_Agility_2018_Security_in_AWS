@@ -1,7 +1,7 @@
-Securing your BIG-IP instance in AWS and deploying Hackazon
-===========================================================
+Securing your BIG-IP instance in AWS and deploying SSL App
+==========================================================
 
-Welcome to Lab2.  We will secure our BIG-IP instance and then deploy our virtual server.
+Welcome to Lab2.  We will secure our BIG-IP instance and then deploy our virtual server with SSL protections.
 
 .. toctree::
    :maxdepth: 2
