@@ -10,11 +10,11 @@ Starting in v13.0 the allowed SSL Ciphers can be managed with a combination of S
 
 #. We will start by creating a SSL Cipher Rule.  Click on **Local Traffic -> Ciphers -> Rules** then **Create.**
 
-#. Enter **hackazon-cipherrule** for the name.
+#. In the **Name** enter :guilabel:hackazon-cipherrule.
 
-#. Enter the following Cipher String
+#. For the **Cipher String** enter:
 
-     **!SSLv2:!EXPORT:!DHE+AES-GCM:!DHE+AES:!DHE+3DES:ECDHE+AES-GCM:ECDHE+AES:RSA+AES-GCM:RSA+AES:ECDHE+3DES:RSA+3DES:-MD5:-SSLv3:-RC4**
+     :guilabel:!SSLv2:!EXPORT:!DHE+AES-GCM:!DHE+AES:!DHE+3DES:ECDHE+AES-GCM:ECDHE+AES:RSA+AES-GCM:RSA+AES:ECDHE+3DES:RSA+3DES:-MD5:-SSLv3:-RC4
 
 #. Click on **Finished.**
 
@@ -22,7 +22,7 @@ Starting in v13.0 the allowed SSL Ciphers can be managed with a combination of S
 
 #. Click on **Create.**
 
-#. Enter **hackazon-ciphergroup** for the **Cipher Group name**
+#. For the **Cipher Group name** enter :guilabel:hackazon-ciphergroup 
 
 #. Select the **hackazon-cipherrule** previously created and add it to the **"Allow the Following" category.** 
 
