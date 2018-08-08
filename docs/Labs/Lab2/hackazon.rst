@@ -3,7 +3,7 @@ Setting up Hackazon Virtual Server
 
 **We will now setup an SSL Offload Virtual Server using the Cipher Group previously configured.**
 
-#. Go to the F5 Admin page and select :guilabel:`**Local Traffic -> Profiles -> SSL -> Client.**`
+#. Go to the F5 Admin page and select :guilabel:`Local Traffic -> Profiles -> SSL -> Client`
 
 #. Click on :guilabel:`Create`
 
@@ -17,7 +17,7 @@ Setting up Hackazon Virtual Server
 
 #. Leave other options as default and click on :guilabel:`Finished`
 
-#. Go to :guilabel:`**Local Traffic -> Pools**`
+#. Go to :guilabel:`Local Traffic -> Pools`
 
 #. Click on :guilabel:`Create`
 
@@ -42,7 +42,7 @@ Setting up Hackazon Virtual Server
 
    This screenshot illustrates one example. The presented IP addresses will not be the ones you see
 
-#. Go to :guilabel:`F5 Admin page` and then :guilabel:`**Local Traffic -> Virtual Servers.**`
+#. Go to :guilabel:`F5 Admin page` and then :guilabel:`Local Traffic -> Virtual Servers`
 
 #. Click on :guilabel:`Create`
 
