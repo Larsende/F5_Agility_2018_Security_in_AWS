@@ -17,7 +17,7 @@ Setting up Hackazon Virtual Server
 
 #. Leave other options as default and click on :guilabel:`Finished`
 
-#. Go to **Local Traffic -> Pools**
+#. Go to :guilabel:`**Local Traffic -> Pools**`
 
 #. Click on :guilabel:`Create`
 
