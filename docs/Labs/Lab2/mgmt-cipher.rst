@@ -7,11 +7,11 @@ SSL Security of F5 Management
 
 #. Log in to the SSH of the F5 BIG-IP by using the same method previously used to change admin password:
 
-     **ssh -i student#-BIG-IP.pem admin@<EIP Host Address for Management network>**
+     :guilabel:`ssh -i student#-BIG-IP.pem admin@<EIP Host Address for Management network>`
 
 #. Before you change the SSL cipher string, you should review the existing string for your specific BIG-IP version. To list the currently configured cipher string, type the following command:
     
-     **list /sys httpd ssl-ciphersuite**
+     :guilabel:`list /sys httpd ssl-ciphersuite`
 
    For example, the BIG-IP 13.1.7 system displays the following cipher string:
 
@@ -19,15 +19,15 @@ SSL Security of F5 Management
 
 #. To restrict Configuration utility access to clients using TLS 1.2 or RC4-SHA ciphers, type the following command:
 
-     **modify /sys httpd ssl-ciphersuite ALL:!ADH:!EXPORT:!eNULL:!MD5:!DES:!SSLv2:-TLSv1:-SSLv3:RC4-SHA**
+     :guilabel:`modify /sys httpd ssl-ciphersuite ALL:!ADH:!EXPORT:!eNULL:!MD5:!DES:!SSLv2:-TLSv1:-SSLv3:RC4-SHA`
 
    Alternatively, if you want to restrict to only TLS 1.1 and TLS 1.2 ciphers, then type the following command instead:
 
-     **modify /sys httpd ssl-ciphersuite ALL:!ADH:!EXPORT:!eNULL:!MD5:!DES:!SSLv2:!SSLv3:!TLSv1**
+     :guilabel:`modify /sys httpd ssl-ciphersuite ALL:!ADH:!EXPORT:!eNULL:!MD5:!DES:!SSLv2:!SSLv3:!TLSv1`
 
 #. Save the configuration change by typing the following command:
 
-     **save /sys config**
+     :guilabel:`save /sys config`
 
 .. |K13400| raw:: html
 
