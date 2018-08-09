@@ -42,12 +42,12 @@ Create a VPC with multiple subnets using a CFT
 You will utilize an instructor provided Cloud Formation Template (CFT) to deploy the required networking in AWS. This deployment will be as shown in the diagram above.
 
 1. Launch the CFT process for creating the VPC and required networking by clicking on this link - |VPC-CFT|
-2. Ensure you are in the ``N. Virginia`` region
-3. At the :guilabel:`Select Template` page, notice that the URL for the template is already entered - select :guilabel:`Next`.
-4. Enter a :guilabel:`Stack name` of ``Student#-VPC-CFT`` and select :guilabel:`Next`
-5. At the :guilabel:`Options` page, leave all defaults and select :guilabel:`Next`
-6. At the :guilabel:`Review` page, select :guilabel:`Create`
-7. You're taken to the list of CFTs being deployed, refresh the page and watch the status of your's until it says :guilabel:`Create_Complete`
+2. Ensure you are in the **N. Virginia** region
+3. At the **Select Template** page, notice that the URL for the template is already entered - select **Next**.
+4. Enter a **Stack name** of :guilabel:`Student#-VPC-CFT` and select **Next**
+5. At the **Options** page, leave all defaults and select **Next**
+6. At the **Review** page, select **Create**
+7. You're taken to the list of CFTs being deployed, refresh the page and watch the status of your's until it says **Create_Complete**
 
 This concludes Module 1 of Lab 1. Next we will deploy the BIG-IP into this VPC that you've just created.
 
