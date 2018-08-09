@@ -48,7 +48,7 @@ Setting up Hackazon Virtual Server
 
 #. Enter a **Virtual Server Name** of :guilabel:`hackazon_vs`
 
-#. In the **Destination Address** field enter :guilabel:`Private IP address` that you determined earlier as part of the ``Elastic IP`` information.
+#. In the **Destination Address** field enter :guilabel:`Private IP address that you determined earlier as part of the Elastic IP information.`
 
 #. For **Service Port** enter :guilabel:`443`
 
