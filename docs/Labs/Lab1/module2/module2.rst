@@ -15,18 +15,17 @@ First, we need to create and save a key pair.
 #. In the AWS Management Console, navigate to **EC2** and then under **Network & Security** to **Key Pairs**
 #. Click **Create Key Pair** and name it :guilabel:`Student#-BIG-IP`.
 #. Click **Create** and it will download the :guilabel:`Student#-BIG-IP.pem` file to your local machine. Be sure to keep track of this file as you will need it to access the BIG-IP later.
-#.  You will need to change the permissions of the :guilabel:`Student#-BIG-IP.pem` key pair.
-  On a MAC, open a terminal and go to the folder you saved the :guilabel:`Student#-BIG-IP.pem` key pair. To change the file permissions type:
+#.  You will need to change the permissions of the :guilabel:`Student#-BIG-IP.pem` key pair. On a MAC, open a terminal and go to the folder you saved the :guilabel:`Student#-BIG-IP.pem` key pair. To change the file permissions type:
 
   :guilabel:`chmod 400 Student#-BIG-IP.pem`
 
 Next, we're ready to deploy the CFT.
 
-#. Got to: |CFT-template|
+#. Go to: |CFT-template|
 #. At the **Select Template** page, ensure you are still in the same region where you created your VPC, note the template URL is already selected, and click **Next**.
 #. For **Stack name** enter a value of :guilabel:`Student#-BIG-IP-CFT`.
-#. Find your :guilabel:`Student#-VPC-CFT` VPC in the drop down.
-#. For the **Management Subnet AZ1** select :guilabel:`Student#-VPC-CFT-MgmtSubnet` (you may have to scroll down the list).
+#. In the **VPC** in the drop down, find your :guilabel:`Student#-VPC-CFT` (you may have to scroll down the list).
+#. For the **Management Subnet AZ1** select :guilabel:`Student#-VPC-CFT-MgmtSubnet`.
 #. Similarly, for **Subnet1** and **Subnet2** assign the :guilabel:`Student#-VPC-CFT-External Subnet` and :guilabel:`Student#-VPC-CFT-Internal Subnet` subnets from the drop down.
 #. Ensure the **BIG-IP Image Name** is set to :guilabel:`AWAF25Mbps`.
 #. Ensure the **AWS Instance Size** is set to :guilabel:`t2.large`.
@@ -45,8 +44,13 @@ Set the admin password for BIG-IP VE
 To initially change the password for the BIG-IP management utility we need to connect via SSH and then modify the admin password.
 
 #. Navigate to **EC2 -> Network Interfaces** and filter for :guilabel:`Student#-BIG-IP`. Find **Management** interface of your BIG-IP instance . Note the **IPv4 Public IP** address for the **Management** interface.
+
+.. figure:: ../images/mgmt-public-ip.png
+
 #. You can connect using an SSH utility - make sure to use :guilabel:`admin` as the username (do not use ``root``) and the **Management IPv4 Public IP** from the previous step. Use the **Student#-BIG-IP.pem** key pair you saved when you created the instance in Lab 1. For example:
-    :guilabel:`ssh -i Student#.pem admin@<EIP-of-Management>`
+
+    :guilabel:`ssh -i Student#.pem admin@<IPv4-Public-IP>`
+
 #.  After connecting via SSH issue the command :guilabel:`modify auth password admin` - change the admin password to one that you will remember
 #.  Save the password change by issuing the command :guilabel:`save sys config`
 #.  You can now connect to the BIG-IP Web UI on HTTPS using the **IPv4 Public IP** for the **Management** interface (bypass the self-signed cert warning) and use the credentials :guilabel:`admin/<password-from-step-4>`
