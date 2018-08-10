@@ -3,8 +3,8 @@ Create Credentials Protection WAF Child Policy
 **Task 1 - Simulate credential attacks.**
 
 #. Open browser and go to :guilabel:`https://<Elastic IP>/user/login`
-#. Enter :guilabel:`f5student` for **Username**
-#. Enter random password for **Password.**  Repeat 5 consecutive times using different password to simulate brute force attack
+#. For **Username** enter :guilabel:`f5student`
+#. For **Password.** enter random incorrect password. Repeat 5 consecutive times using different password to simulate brute force attack
 
    .. NOTE::
 
@@ -13,9 +13,10 @@ Create Credentials Protection WAF Child Policy
       for a period of time, however user can continue to repeated attempts to
       elongate lockout period.
 
-#. Open new incognito browser and open developer tools. (In Chrome for example: View -> Developer ->Developer Tools)
-#. Browse to :guilabel:`https://<Elastic IP>/user/login` and login as :guilabel:`f5student` with password :guilabel:`password`
+#. Open new **incognito browser** and open **developer tools**. (In Chrome for example: **View -> Developer ->Developer Tools**)
+#. Browse to :guilabel:`https://<Elastic IP>/user/login` and login with **username** :guilabel:`f5student` and **password** :guilabel:`password`
 #. Once successfully logged in, review log on Developer Tool.
+
    - Select :guilabel:`Network` tab
    - Highlight :guilabel:`login?return_url=`
    - On right panel click :guilabel:`Headers` and scroll to bottom of **Form Data** to view **Username** and **Password**.
@@ -42,12 +43,12 @@ Create Credentials Protection WAF Child Policy
       - Blocking
 
 #. Select the **Security -> Application Security -> Security Policies -> Policies List** page
-#. Click **Create New Policy** then click **Advanced** and enter info as shown below.
+#. Click **Create New Policy** then click **Advanced** and enter info as shown in image below.
 
    .. image:: ./images/image341.png
      :height: 300px
 
-#. Click ``Create Policy``
+#. Click **Create Policy**
 
    .. image:: ./images/image339.png
      :height: 300px
@@ -62,7 +63,7 @@ Create Credentials Protection WAF Child Policy
 
 #. Fill in the details as in the image above and click on **Create**
 #. Select **Security -> Application Security -> Anomaly Detection -> Brute Force Attack Prevention** then click **Create**
-#. Change **Login Page** drop down box to :guilabel:`[HTTPS]/user/login`.  Click on **Create**
+#. Change **Login Page** drop down box to :guilabel:`[HTTPS]/user/login` then click **Create**
 #. Click **Apply Policy** then **OK** to commit changes
 
    .. image:: ./images/image343.png
@@ -76,12 +77,12 @@ Create Credentials Protection WAF Child Policy
    .. image:: ./images/image344.png
      :height: 100px
 
-#. Enter :guilabel:`protect_credentials` for **Profile Name**
+#. For **Profile Name** enter :guilabel:`protect_credentials`
 
    .. image:: ./images/image345.png
      :height: 300px
 
-#. Click on the **`>`** next to "Create New Profile" to expand menu.
+#. Click on the **`>`** next to **Create New Profile** to expand menu.
 #. Select **URL List** and click **Add**
 
    .. image:: ./images/image346.png
@@ -98,7 +99,7 @@ Create Credentials Protection WAF Child Policy
      :height: 150px
 
 #. Click **Login Page Properties**
-#. Check **Yes** for **URL is Login Page**
+#. For **URL is Login Page** check **Yes** box
 #. For **A string should appear** enter :guilabel:`My Account`
 #. For **A string that should NOT appear** enter :guilabel:`Username or password are incorrect`
 
@@ -121,11 +122,12 @@ Create Credentials Protection WAF Child Policy
 
 #. Open browser and go to :guilabel:`https://<Elastic IP>/user/login`
 #. For **Username** enter :guilabel:`f5student`
-#. For **Password.** enter random password.  Repeat multiple times using different password to simulate brute force attack.  You should receive a captcha challenge after 3 failed attempts.
-#. Enter captcha challenge then enter correct credentials to login in successfully.
-#. Open new incognito browser and open developer tools. (View->Developer-Developer Tools)
-#. Browse to :guilabel:`https://<Elastic IP>/user/login` and login as :guilabel:`f5student`
-#. Once successfully logged in, review log on Developer Tool.
+#. For **Password** enter random incorrect password.  Repeat multiple times using different password to simulate brute force attack.  You should receive a captcha challenge after 3 failed attempts.
+#. Enter **captcha challenge** then enter correct credentials to login in successfully.
+#. Open new **incognito browser** and open **developer tools**. (View->Developer-Developer Tools)
+#. Browse to :guilabel:`https://<Elastic IP>/user/login` and login with **username** :guilabel:`f5student` and **password** guilabel:`password`
+#. Once successfully logged in, review log on **Developer Tool**.
+
    - Select :guilabel:`Network` tab
    - Highlight :guilabel:`login?return_url=`
    - On right panel click :guilabel:`Headers` and scroll to bottom of **Form Data** to view **Username** and **Password**.

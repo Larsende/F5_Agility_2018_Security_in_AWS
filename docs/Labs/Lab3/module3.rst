@@ -3,7 +3,7 @@ Create Base WAF Child Policy
 **Task 1 - Simulate attacks to demonstrate common web app vulnerabilities.**
 
 #. Open browser and go to :guilabel:`https://<Elastic IP>` for the **Hackazon website**
-#. In the **Search field** enter :guilabel:`%' or 1='1` and press **Enter**
+#. In the **Search** field type :guilabel:`%' or 1='1` and press **Enter**
 
    .. NOTE::
 
@@ -41,11 +41,11 @@ Create Base WAF Child Policy
 #. Click **Create New Policy**
 #. Select **Advanced** options
 #. For **Policy Name** enter :guilabel:`waf_baseOnly`
-#. For **Policy Type** select **Security**
+#. For **Policy Type** select :guilabel:`Security`
 #. For **Parent Policy** enter :guilabel:`waf_base`
 #. Select **OK** to accept warning
 #. For **Virtual Server** select :guilabel:`hackazon_vs`
-#. Change **Enforcement Mode** to **Blocking**
+#. Change **Enforcement Mode** to :guilabel:`Blocking`
 
    .. image:: ./images/image311.png
      :height: 400px
@@ -75,13 +75,13 @@ Create Base WAF Child Policy
      :height: 300px
 
 #. Open browser and go to :guilabel:`https://<Elastic IP>` for the hackazon website
-#. In Search field enter :guilabel:`%' or 1='1` and press **Enter**.  You should receive a block message similar to below. Take note of the Support ID number.
+#. In the **Search** field type :guilabel:`%' or 1='1` and press **Enter**.  You should receive a block message similar to below. Take note of the **Support ID** number.
 
    .. image:: ./images/image314.png
      :height: 70px
 
 #. Return to hackazon main page
-#. Enter :guilabel:`<script>alert("Your system is infected! Call 999-888-7777 for help.")</script>` in Search field and press Enter.  You should see a similar block message. Take note of the Support ID number.
+#. In the **Search** field type :guilabel:`<script>alert("Your system is infected! Call 999-888-7777 for help.")</script>` and press **Enter**.  You should see a similar block message. Take note of the **Support ID** number.
 
 **Task 4 - Review WAF event logs on BIG-IP GUI.**
 

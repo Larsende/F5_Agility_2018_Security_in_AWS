@@ -8,7 +8,7 @@ Deploy Super-NetOps host
    .. image:: ./images/image410.png
       :height: 200px
 
-#. Select **t2.micro** then click **Next: Configure Instance Details**
+#. For *Instance Size** select :guilabel:`t2.micro` then click **Next: Configure Instance Details**
 #. For the **Network** select your :guilabel:`Student#-VPC-CFT`
 #. For the **Subnet** select your :guilabel:`Student#-VPC-CFT-MgmtSubnet`
 #. For **Auto-assign Public IP** select :guilabel:`Enable`
@@ -38,7 +38,7 @@ Deploy Super-NetOps host
 
 #. View Instances and filter for your **Student#** to see your **unamed instance**.
 #. Connect to Super-NetOps host using ssh utility. For example; ssh -i "Student#-BIG-IP.pem" ec2-user@<Super-NetOps_IP>
-#. Type sudo docker run -it f5usecases/f5-rs-container:latest``
+#. Type :guilabel:`sudo docker run -it f5usecases/f5-rs-container:latest`
 #. Type :guilabel:`git clone https://github.com/gotspam/as3-examples.git`
 #. Type :guilabel:`cd as3-examples`
 
@@ -71,6 +71,7 @@ You will now need to setup security permissions on AWS EC2 console so that Super
 #. Click on **Save**.
 #. Go back to your SSH session on the **Super-NetOps** host.
 #. Ensure your **Super-NetOps** host can communicate with your **BIG-IP Management** instance.
+
    - Type :guilabel:`ssh admin@<BIG-IP Private IP Address (eth0)>`.
    - After successfully logging in, type :guilabel:`quit` to disconnect ssh session.
    - Type :guilabel:`ansible-playbook playbooks/cmd.yaml`.

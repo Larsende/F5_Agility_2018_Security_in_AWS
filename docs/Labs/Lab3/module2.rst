@@ -27,17 +27,17 @@ Create WAF Parent Policy
      :height: 30px
 
 #. For **Policy Name** enter :guilabel:`waf_base`
-#. For **Policy Type** select **Parent**
-#. For **Policy Template** select **Rapid Deployment Policy**
-#. For **Learning Mode** select **Manual**
-#. Change **Signature Staging** to **Disabled**
+#. For **Policy Type** select :guilabel:`Parent`
+#. For **Policy Template** select :guilabel:`Rapid Deployment Policy`
+#. For **Learning Mode** select :guilabel:`Manual`
+#. Change **Signature Staging** to :guilabel:`Disabled`
 
    .. image:: ./images/image309.png
      :height: 400px
 
 #. Click **Create Policy**
-#. Once the policy is created, with the :guilabel:`waf_base` policy selected, in the right panel click :guilabel:`Inheritance Settings`.
-#. Configure the following inheritance settings, and then click **Save Changes**
+#. Once the policy is created, with the :guilabel:`waf_base` policy selected, in the right panel click **Inheritance Settings**.
+#. Configure the **inheritance settings** as shown on the image below, and then click **Save Changes**
 
    .. image:: ./images/image310.png
      :height: 400px
