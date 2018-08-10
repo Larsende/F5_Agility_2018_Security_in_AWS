@@ -2,19 +2,19 @@ Create Base WAF Child Policy
 ----------------------------
 **Task 1 - Simulate attacks to demonstrate common web app vulnerabilities.**
 
-#. Open browser and go to ``https://<Elastic IP>`` for the Hackazon website
-#. Enter ``%' or 1='1`` in Search field and press Enter
+#. Open browser and go to :guilabel:`https://<Elastic IP>` for the **Hackazon website**
+#. In the **Search field** enter :guilabel:`%' or 1='1` and press **Enter**
 
    .. NOTE::
 
-      This is a common ``sql injection`` attack and although this did not return
+      This is a common :guilabel:`sql injection` attack and although this did not return
       anything exciting the search request was accepted and processed with response.
 
-#. Enter ``<script>alert("Your system is infected! Call 999-888-7777 for help.")</script>`` in Search field and press Enter
+#. In the **Search field** enter :guilabel:`<script>alert("Your system is infected! Call 999-888-7777 for help.")</script>` and press **Enter**
 
    .. NOTE::
 
-      This is a common ``Cross-site scripting (XSS)`` attack and although this did not return
+      This is a common :guilabel:`Cross-site scripting (XSS)` attack and although this did not return
       anything exciting the search request was accepted and processed with response.
 
       Also some modern versions of browsers will block this request from displaying a response, but the request was actually sent to the application.  If Chrome blocks it you can try on another browser.
@@ -40,11 +40,11 @@ Create Base WAF Child Policy
 #. Select the **Security->Application Security->Security Policies->Policies List** page
 #. Click **Create New Policy**
 #. Select **Advanced** options
-#. Enter ``waf_baseOnly`` for **Policy Name**
-#. Select **Security** for **Policy Type**
-#. Enter ``waf_base`` for **Parent Policy**
-#. Select OK to accept warning
-#. Select ``hackazon_vs`` for **Virtual Server**
+#. For **Policy Name** enter :guilabel:`waf_baseOnly`
+#. For **Policy Type** select **Security**
+#. For **Parent Policy** enter :guilabel:`waf_base`
+#. Select **OK** to accept warning
+#. For **Virtual Server** select :guilabel:`hackazon_vs`
 #. Change **Enforcement Mode** to **Blocking**
 
    .. image:: ./images/image311.png
@@ -66,27 +66,27 @@ Create Base WAF Child Policy
 **Task 3 - Test WAF policy.**
 
 #. Select the **Local Traffic->Virtual Servers->Virtual Servers List** page
-#. Click the **hackazon_vs** to display virtual server properties
+#. Click the **hackazon_vs** to display Virtual Server Properties
 #. Click the **Security->Policies** tab to display Policy Settings
-#. Ensure **waf_log** profile is selected in the Log Profile
+#. In the **Log Profile** ensure :guilabel:`waf_log` profile is selected
 #. Select **update**
 
    .. image:: ./images/image313.png
      :height: 300px
 
-#. Open browser and go to ``https://<Elastic IP>`` for the hackazon website
-#. Enter ``%' or 1='1`` in Search field and press Enter.  You should receive a block message similar to below. Take note of the Support ID number.
+#. Open browser and go to :guilabel:`https://<Elastic IP>` for the hackazon website
+#. In Search field enter :guilabel:`%' or 1='1` and press **Enter**.  You should receive a block message similar to below. Take note of the Support ID number.
 
    .. image:: ./images/image314.png
      :height: 70px
 
 #. Return to hackazon main page
-#. Enter ``<script>alert("Your system is infected! Call 999-888-7777 for help.")</script>`` in Search field and press Enter.  You should see a similar block message. Take note of the Support ID number.
+#. Enter :guilabel:`<script>alert("Your system is infected! Call 999-888-7777 for help.")</script>` in Search field and press Enter.  You should see a similar block message. Take note of the Support ID number.
 
 **Task 4 - Review WAF event logs on BIG-IP GUI.**
 
 #. Select the **Security->Event Logs->Application->Requests** page
-#. Select the ``Event`` with the matching ``Support ID`` noted on the block pages
+#. Select the :guilabel:`Event` with the matching :guilabel:`Support ID` noted on the block pages
 
    .. image:: ./images/image315.png
      :height: 300px
@@ -94,9 +94,9 @@ Create Base WAF Child Policy
 
    .. NOTE::
 
-      You can view the "Decoded Requests" and the "Original Request" however the ``Response`` is not captured by default.
+      You can view the "Decoded Requests" and the "Original Request" however the "Response" is not captured by default.
 
-#. Select ``Attack Signatures Detected`` to view details of the request that triggered the violation.
+#. Select :guilabel:`Attack Signatures Detected` to view details of the request that triggered the violation.
 
    .. image:: ./images/image316.png
      :height: 200px

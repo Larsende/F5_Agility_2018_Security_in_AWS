@@ -3,7 +3,7 @@ Create WAF logging profile
 **Create a logging profile to capture events associated with the WAF policies.**
 
 #. Select **Security->Event Logs->Logging Profiles** then click **Create**
-#. Enter ``waf_log`` for **Profile Name**
+#. For **Profile Name** enter :guilabel:`waf_log` 
 #. Select the **Application Security, Dos Protection**, and **Bot Defense** checkboxes
 
    .. image:: ./images/image301.png
@@ -12,12 +12,12 @@ Create WAF logging profile
 #. On the **Application Security** tab, for **Request Type** select **All requests**
 
    .. image:: ./images/image302.png
-      :height: 100px
+      :height: 150px
 
 #. On the **DoS Protection** tab select the **Local Publisher** checkbox
 
    .. image:: ./images/image303.png
-      :height: 100px
+      :height: 150px
 
 #. On the **Bot Defense** tab select the **Local Publisher, Log Illegal Requests** and **Log Challenged Requests** checkboxes
 
