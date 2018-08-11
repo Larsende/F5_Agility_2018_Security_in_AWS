@@ -75,7 +75,7 @@ Create Base WAF Child Policy
      :height: 300px
 
 #. Open browser and go to :guilabel:`https://<Elastic IP>` for the hackazon website
-#. In the **Search** field type **%' or 1='1** and press **Enter**.  You should receive a block message similar to below. Take note of the **Support ID** number.
+#. In the **Search** field type :guilable:`%' or 1='1` and press **Enter**.  You should receive a block message similar to below. Take note of the **Support ID** number.
 
    .. image:: ./images/image314.png
      :height: 70px
