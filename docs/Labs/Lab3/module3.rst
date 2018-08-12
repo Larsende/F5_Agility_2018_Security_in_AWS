@@ -9,7 +9,7 @@ Create Base WAF Child Policy
    .. image:: ./images/image392.png
      :height: 400px
 
-#. In the browser address bar append :guilabel:` or 1=1` then press **Enter**
+#. In the browser address bar append :guilabel:`or 1=1` then press **Enter**
 
    .. image:: ./images/image393.png
      :height: 50px
