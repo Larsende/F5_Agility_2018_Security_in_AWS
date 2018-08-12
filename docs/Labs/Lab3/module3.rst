@@ -2,8 +2,17 @@ Create Base WAF Child Policy
 ----------------------------
 **Task 1 - Simulate attacks to demonstrate common web app vulnerabilities.**
 
-#. Open browser and go to :guilabel:`https://<Elastic IP>` for the **Hackazon website**
-#. In the **Search** field type :guilabel:`%' or 1='1` and press **Enter**
+#. Open browser and go to :guilabel:`https://<Elastic IP>` to access the **Hackazon website**
+#. Under **Special selection** click on any sale item displayed
+#. Note the **product id** in the browser address bar
+
+   .. image:: ./images/image392.png
+     :height: 400px
+
+#. In the browser address bar append :guilabel:` or 1=1` then press **Enter**
+
+   .. image:: ./images/image393.png
+     :height: 50px
 
    .. NOTE::
 
