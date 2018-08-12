@@ -83,7 +83,7 @@ Create Base WAF Child Policy
    .. image:: ./images/image313.png
      :height: 300px
 
-#. Open browser and go to :guilabel:`https://<Elastic IP>/product/view?id=16 or 1=1`.  You should receive a block message similar to below. Take note of the **Support ID** number.
+#. Open browser and go to :guilabel:`https://<Elastic IP>/product/view?id=101 or 1=1`.  You should receive a block message similar to below. Take note of the **Support ID** number.
 
    .. image:: ./images/image314.png
      :height: 70px
